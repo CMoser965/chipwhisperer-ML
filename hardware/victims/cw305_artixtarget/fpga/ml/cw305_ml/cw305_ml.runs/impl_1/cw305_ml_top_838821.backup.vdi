@@ -1,0 +1,441 @@
+#-----------------------------------------------------------
+# Vivado v2022.1.2 (64-bit)
+# SW Build 3605665 on Fri Aug  5 22:52:02 MDT 2022
+# IP Build 3603185 on Sat Aug  6 04:07:44 MDT 2022
+# Start of session at: Thu Dec 29 18:41:11 2022
+# Process ID: 838821
+# Current directory: /home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.runs/impl_1
+# Command line: vivado -log cw305_ml_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source cw305_ml_top.tcl -notrace
+# Log file: /home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.runs/impl_1/cw305_ml_top.vdi
+# Journal file: /home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.runs/impl_1/vivado.jou
+# Running On: bnn.atrc.okstate.edu, OS: Linux, CPU Frequency: 3200.000 MHz, CPU Physical cores: 16, Host memory: 67266 MB
+#-----------------------------------------------------------
+source cw305_ml_top.tcl -notrace
+Command: link_design -top cw305_ml_top -part xc7k70tfbv676-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2629.434 ; gain = 0.000 ; free physical = 54192 ; free virtual = 60393
+INFO: [Project 1-479] Netlist was created with Vivado 2022.1.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/constrs_1/imports/common/cw305_main.xdc]
+CRITICAL WARNING: [Common 17-69] Command failed: 'L14' is not a valid site or package pin name. [/home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/constrs_1/imports/common/cw305_main.xdc:17]
+CRITICAL WARNING: [Common 17-69] Command failed: 'R1' is not a valid site or package pin name. [/home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/constrs_1/imports/common/cw305_main.xdc:19]
+CRITICAL WARNING: [Vivado 12-1815] Setting property 'IOSTANDARD' is not allowed for GT terminals. [/home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/constrs_1/imports/common/cw305_main.xdc:37]
+CRITICAL WARNING: [Common 17-69] Command failed: 'A7' is not a valid site or package pin name. [/home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/constrs_1/imports/common/cw305_main.xdc:38]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Site location is not valid [/home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/constrs_1/imports/common/cw305_main.xdc:39]
+CRITICAL WARNING: [Common 17-69] Command failed: 'D3' is not a valid site or package pin name. [/home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/constrs_1/imports/common/cw305_main.xdc:40]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Site location is not valid [/home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/constrs_1/imports/common/cw305_main.xdc:41]
+CRITICAL WARNING: [Common 17-69] Command failed: 'F3' is not a valid site or package pin name. [/home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/constrs_1/imports/common/cw305_main.xdc:42]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Site location is not valid [/home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/constrs_1/imports/common/cw305_main.xdc:43]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Site location is not valid [/home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/constrs_1/imports/common/cw305_main.xdc:44]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Site location is not valid [/home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/constrs_1/imports/common/cw305_main.xdc:45]
+CRITICAL WARNING: [Common 17-69] Command failed: 'F4' is not a valid site or package pin name. [/home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/constrs_1/imports/common/cw305_main.xdc:56]
+CRITICAL WARNING: [Common 17-69] Command failed: 'G5' is not a valid site or package pin name. [/home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/constrs_1/imports/common/cw305_main.xdc:57]
+CRITICAL WARNING: [Common 17-69] Command failed: 'J1' is not a valid site or package pin name. [/home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/constrs_1/imports/common/cw305_main.xdc:58]
+CRITICAL WARNING: [Common 17-69] Command failed: 'G1' is not a valid site or package pin name. [/home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/constrs_1/imports/common/cw305_main.xdc:61]
+CRITICAL WARNING: [Common 17-69] Command failed: 'G2' is not a valid site or package pin name. [/home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/constrs_1/imports/common/cw305_main.xdc:62]
+CRITICAL WARNING: [Common 17-69] Command failed: 'E1' is not a valid site or package pin name. [/home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/constrs_1/imports/common/cw305_main.xdc:64]
+CRITICAL WARNING: [Common 17-69] Command failed: 'E2' is not a valid site or package pin name. [/home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/constrs_1/imports/common/cw305_main.xdc:65]
+CRITICAL WARNING: [Common 17-69] Command failed: 'C1' is not a valid site or package pin name. [/home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/constrs_1/imports/common/cw305_main.xdc:67]
+CRITICAL WARNING: [Common 17-69] Command failed: 'K3' is not a valid site or package pin name. [/home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/constrs_1/imports/common/cw305_main.xdc:68]
+CRITICAL WARNING: [Common 17-69] Command failed: 'L2' is not a valid site or package pin name. [/home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/constrs_1/imports/common/cw305_main.xdc:69]
+CRITICAL WARNING: [Common 17-69] Command failed: 'C7' is not a valid site or package pin name. [/home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/constrs_1/imports/common/cw305_main.xdc:72]
+CRITICAL WARNING: [Common 17-69] Command failed: 'C6' is not a valid site or package pin name. [/home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/constrs_1/imports/common/cw305_main.xdc:73]
+CRITICAL WARNING: [Common 17-69] Command failed: 'C2' is not a valid site or package pin name. [/home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/constrs_1/imports/common/cw305_main.xdc:79]
+CRITICAL WARNING: [Common 17-69] Command failed: 'A5' is not a valid site or package pin name. [/home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/constrs_1/imports/common/cw305_main.xdc:82]
+WARNING: [Vivado 12-750] There are no ChipScope debug cores in this design. [/home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/constrs_1/imports/common/cw305_main.xdc:121]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/constrs_1/imports/common/cw305_main.xdc:121]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-750] There are no ChipScope debug cores in this design. [/home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/constrs_1/imports/common/cw305_main.xdc:122]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/constrs_1/imports/common/cw305_main.xdc:122]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-750] There are no ChipScope debug cores in this design. [/home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/constrs_1/imports/common/cw305_main.xdc:123]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/constrs_1/imports/common/cw305_main.xdc:123]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'usb_clk_buf'. [/home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/constrs_1/imports/common/cw305_main.xdc:124]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'dbg_hub' was not found. [/home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/constrs_1/imports/common/cw305_main.xdc:124]
+Finished Parsing XDC File [/home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/constrs_1/imports/common/cw305_main.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2629.434 ; gain = 0.000 ; free physical = 54085 ; free virtual = 60286
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+5 Infos, 4 Warnings, 29 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k70t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors, 8 Warnings
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:00.49 ; elapsed = 00:00:00.32 . Memory (MB): peak = 2693.465 ; gain = 64.031 ; free physical = 54077 ; free virtual = 60279
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 848993ba
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2693.465 ; gain = 0.000 ; free physical = 53704 ; free virtual = 59905
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 115f7f592
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2837.605 ; gain = 0.000 ; free physical = 53452 ; free virtual = 59654
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 8 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 115f7f592
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2837.605 ; gain = 0.000 ; free physical = 53452 ; free virtual = 59654
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 11a080c3b
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2837.605 ; gain = 0.000 ; free physical = 53452 ; free virtual = 59654
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 1 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 11a080c3b
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2869.621 ; gain = 32.016 ; free physical = 53452 ; free virtual = 59654
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 11a080c3b
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2869.621 ; gain = 32.016 ; free physical = 53452 ; free virtual = 59654
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 11a080c3b
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2869.621 ; gain = 32.016 ; free physical = 53452 ; free virtual = 59654
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               8  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               1  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2869.621 ; gain = 0.000 ; free physical = 53452 ; free virtual = 59654
+Ending Logic Optimization Task | Checksum: 1b78fe5fa
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2869.621 ; gain = 32.016 ; free physical = 53452 ; free virtual = 59654
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 1b78fe5fa
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2869.621 ; gain = 0.000 ; free physical = 53452 ; free virtual = 59654
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 1b78fe5fa
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2869.621 ; gain = 0.000 ; free physical = 53452 ; free virtual = 59654
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2869.621 ; gain = 0.000 ; free physical = 53452 ; free virtual = 59654
+Ending Netlist Obfuscation Task | Checksum: 1b78fe5fa
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2869.621 ; gain = 0.000 ; free physical = 53452 ; free virtual = 59654
+INFO: [Common 17-83] Releasing license: Implementation
+22 Infos, 4 Warnings, 29 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+INFO: [Common 17-1381] The checkpoint '/home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.runs/impl_1/cw305_ml_top_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file cw305_ml_top_drc_opted.rpt -pb cw305_ml_top_drc_opted.pb -rpx cw305_ml_top_drc_opted.rpx
+Command: report_drc -file cw305_ml_top_drc_opted.rpt -pb cw305_ml_top_drc_opted.pb -rpx cw305_ml_top_drc_opted.rpx
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/chmoser/tools/Xilinx/Vivado/2022.1/data/ip'.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.runs/impl_1/cw305_ml_top_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k70t'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 8 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3033.172 ; gain = 0.000 ; free physical = 53399 ; free virtual = 59601
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: d674f265
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3033.172 ; gain = 0.000 ; free physical = 53399 ; free virtual = 59601
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3033.172 ; gain = 0.000 ; free physical = 53399 ; free virtual = 59601
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+WARNING: [Place 30-87] Partially locked IO Bus is found. Following components of the IO Bus usb_addr are not locked:  'usb_addr[17]'  'usb_addr[16]'  'usb_addr[13]'  'usb_addr[12]'  'usb_addr[11]'  'usb_addr[9]'  'usb_addr[8]'  'usb_addr[6]'  'usb_addr[5]'  'usb_addr[2]'  'usb_addr[1]'  'usb_addr[0]' 
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 16da44e42
+
+Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.07 . Memory (MB): peak = 3033.172 ; gain = 0.000 ; free physical = 53413 ; free virtual = 59615
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 2688495c2
+
+Time (s): cpu = 00:00:00.36 ; elapsed = 00:00:00.09 . Memory (MB): peak = 3033.172 ; gain = 0.000 ; free physical = 53418 ; free virtual = 59620
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 2688495c2
+
+Time (s): cpu = 00:00:00.36 ; elapsed = 00:00:00.09 . Memory (MB): peak = 3033.172 ; gain = 0.000 ; free physical = 53418 ; free virtual = 59620
+Phase 1 Placer Initialization | Checksum: 2688495c2
+
+Time (s): cpu = 00:00:00.36 ; elapsed = 00:00:00.09 . Memory (MB): peak = 3033.172 ; gain = 0.000 ; free physical = 53418 ; free virtual = 59620
+
+Phase 2 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3033.172 ; gain = 0.000 ; free physical = 53418 ; free virtual = 59620
+
+Time (s): cpu = 00:00:00.36 ; elapsed = 00:00:00.09 . Memory (MB): peak = 3033.172 ; gain = 0.000 ; free physical = 53418 ; free virtual = 59620
+INFO: [Place 30-281] No place-able instance is found; design doesn't contain any instance or all instances are placed
+Ending Placer Task | Checksum: 16da44e42
+
+Time (s): cpu = 00:00:00.36 ; elapsed = 00:00:00.09 . Memory (MB): peak = 3033.172 ; gain = 0.000 ; free physical = 53418 ; free virtual = 59620
+INFO: [Common 17-83] Releasing license: Implementation
+41 Infos, 5 Warnings, 29 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00 . Memory (MB): peak = 3033.172 ; gain = 0.000 ; free physical = 53420 ; free virtual = 59622
+INFO: [Common 17-1381] The checkpoint '/home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.runs/impl_1/cw305_ml_top_placed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_io -file cw305_ml_top_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.09 . Memory (MB): peak = 3033.172 ; gain = 0.000 ; free physical = 53399 ; free virtual = 59601
+INFO: [runtcl-4] Executing : report_utilization -file cw305_ml_top_utilization_placed.rpt -pb cw305_ml_top_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file cw305_ml_top_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3033.172 ; gain = 0.000 ; free physical = 53416 ; free virtual = 59618
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k70t'
+INFO: [Vivado_Tcl 4-241] Physical synthesis in post route mode ( 100.0% nets are fully routed)
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+52 Infos, 5 Warnings, 29 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3033.172 ; gain = 0.000 ; free physical = 53403 ; free virtual = 59605
+INFO: [Common 17-1381] The checkpoint '/home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.runs/impl_1/cw305_ml_top_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k70t'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 1 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: 9a39b116 ConstDB: 0 ShapeSum: d36a9d2c RouteDB: 0
+Post Restoration Checksum: NetGraph: a1fa3f07 NumContArr: 843028e1 Constraints: 0 Timing: 0
+Phase 1 Build RT Design | Checksum: 1262a67e8
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 3084.117 ; gain = 50.945 ; free physical = 53265 ; free virtual = 59467
+
+Phase 2 Router Initialization
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 1262a67e8
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 3105.113 ; gain = 71.941 ; free physical = 53230 ; free virtual = 59433
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 1262a67e8
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 3105.113 ; gain = 71.941 ; free physical = 53230 ; free virtual = 59433
+ Number of Nodes with overlaps = 0
+
+Phase 2.3 Update Timing
+Phase 2.3 Update Timing | Checksum: 154a5604c
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 3117.738 ; gain = 84.566 ; free physical = 53228 ; free virtual = 59430
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 2 Router Initialization | Checksum: 154a5604c
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 3117.738 ; gain = 84.566 ; free physical = 53226 ; free virtual = 59429
+
+Phase 3 Initial Routing
+
+Phase 3.1 Global Routing
+Phase 3.1 Global Routing | Checksum: 154a5604c
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 3117.738 ; gain = 84.566 ; free physical = 53226 ; free virtual = 59429
+ Number of Nodes with overlaps = 0
+Phase 3 Initial Routing | Checksum: 154a5604c
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 3117.738 ; gain = 84.566 ; free physical = 53226 ; free virtual = 59428
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+Phase 4.1 Global Iteration 0 | Checksum: 154a5604c
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 3117.738 ; gain = 84.566 ; free physical = 53226 ; free virtual = 59428
+Phase 4 Rip-up And Reroute | Checksum: 154a5604c
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 3117.738 ; gain = 84.566 ; free physical = 53226 ; free virtual = 59428
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+Phase 5.1 Delay CleanUp | Checksum: 154a5604c
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 3117.738 ; gain = 84.566 ; free physical = 53226 ; free virtual = 59428
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 154a5604c
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 3117.738 ; gain = 84.566 ; free physical = 53226 ; free virtual = 59428
+Phase 5 Delay and Skew Optimization | Checksum: 154a5604c
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 3117.738 ; gain = 84.566 ; free physical = 53226 ; free virtual = 59428
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 154a5604c
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 3117.738 ; gain = 84.566 ; free physical = 53226 ; free virtual = 59428
+Phase 6.1 Hold Fix Iter | Checksum: 154a5604c
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 3117.738 ; gain = 84.566 ; free physical = 53226 ; free virtual = 59428
+Phase 6 Post Hold Fix | Checksum: 154a5604c
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 3117.738 ; gain = 84.566 ; free physical = 53226 ; free virtual = 59428
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 154a5604c
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 3117.738 ; gain = 84.566 ; free physical = 53225 ; free virtual = 59428
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 154a5604c
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 3117.738 ; gain = 84.566 ; free physical = 53225 ; free virtual = 59428
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 154a5604c
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 3133.746 ; gain = 100.574 ; free physical = 53225 ; free virtual = 59428
+
+Phase 10 Post Router Timing
+Phase 10 Post Router Timing | Checksum: 154a5604c
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 3133.746 ; gain = 100.574 ; free physical = 53225 ; free virtual = 59428
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 3133.746 ; gain = 100.574 ; free physical = 53259 ; free virtual = 59462
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+61 Infos, 5 Warnings, 29 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3133.746 ; gain = 0.000 ; free physical = 53260 ; free virtual = 59463
+INFO: [Common 17-1381] The checkpoint '/home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.runs/impl_1/cw305_ml_top_routed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file cw305_ml_top_drc_routed.rpt -pb cw305_ml_top_drc_routed.pb -rpx cw305_ml_top_drc_routed.rpx
+Command: report_drc -file cw305_ml_top_drc_routed.rpt -pb cw305_ml_top_drc_routed.pb -rpx cw305_ml_top_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.runs/impl_1/cw305_ml_top_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file cw305_ml_top_methodology_drc_routed.rpt -pb cw305_ml_top_methodology_drc_routed.pb -rpx cw305_ml_top_methodology_drc_routed.rpx
+Command: report_methodology -file cw305_ml_top_methodology_drc_routed.rpt -pb cw305_ml_top_methodology_drc_routed.pb -rpx cw305_ml_top_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 8 threads
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file /home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.runs/impl_1/cw305_ml_top_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [runtcl-4] Executing : report_power -file cw305_ml_top_power_routed.rpt -pb cw305_ml_top_power_summary_routed.pb -rpx cw305_ml_top_power_routed.rpx
+Command: report_power -file cw305_ml_top_power_routed.rpt -pb cw305_ml_top_power_summary_routed.pb -rpx cw305_ml_top_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+73 Infos, 5 Warnings, 29 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [runtcl-4] Executing : report_route_status -file cw305_ml_top_route_status.rpt -pb cw305_ml_top_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -file cw305_ml_top_timing_summary_routed.rpt -pb cw305_ml_top_timing_summary_routed.pb -rpx cw305_ml_top_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [runtcl-4] Executing : report_incremental_reuse -file cw305_ml_top_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file cw305_ml_top_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file cw305_ml_top_bus_skew_routed.rpt -pb cw305_ml_top_bus_skew_routed.pb -rpx cw305_ml_top_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 29 18:41:28 2022...
