@@ -11,9 +11,8 @@ compile:
 	-g2005-sv \
 	-Wportbind \
 	-Wselect-range \
-	-I../../../common/ \
+	-I../../common/ \
 	-I. \
-	-DGOOGLE_VAULT_AES \
 	-P tb.pDUMP=$(DUMP) \
 	-P tb.pSEED=$(SEED) \
 	-P tb.pTIMEOUT=$(TIMEOUT) \

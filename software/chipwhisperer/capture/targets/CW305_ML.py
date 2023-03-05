@@ -1,3 +1,4 @@
+
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
@@ -232,7 +233,7 @@ class CW305_ML(CW305):
     def loadWeights(self, weights):
         
         if self.REG_NN_WEIGHTS is None:
-            target_logger.errror("target.REG_NN_WEIGHT unset. Have you given target a verilog defines file?")
+            target_logger.error("target.REG_NN_WEIGHT unset. Have you given target a verilog defines file?")
             return
         self.weights = weights
         weights = weights[::-1]
@@ -242,7 +243,7 @@ class CW305_ML(CW305):
     def readOutputs(self):
         
         if self.REG_NN_RES is None:
-            target_logger.errror("target.REG_NN_RES unset. Have you given target a verilog defines file?")
+            target_logger.error("target.REG_NN_RES unset. Have you given target a verilog defines file?")
             return
         data = self.fpga_read(self.REG_NN_RES, 1)
         data = data[::-1]

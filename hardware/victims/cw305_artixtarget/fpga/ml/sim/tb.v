@@ -28,7 +28,7 @@ either expressed or implied, of NewAE Technology Inc.
 `timescale 1ns / 1ns
 `default_nettype none 
 
-`include "cw305_defines.v"
+`include "cw305_ml_defines.v"
 
 module tb();
     parameter pADDR_WIDTH = 21;
@@ -39,6 +39,11 @@ module tb();
     parameter pTIMEOUT = 30000;
     parameter pVERBOSE = 0;
     parameter pDUMP = 0;
+
+    parameter pWEIGHTCNT = 16;
+    parameter pINPUTCNT = 4;
+    parameter pOUTPUTCNT = 4;
+    parameter pBIASCNT = 1; 
 
     reg usb_clk;
     reg usb_clk_enable;
@@ -115,87 +120,31 @@ module tb();
       #(pUSB_CLOCK_PERIOD*2) pushbutton = 1;
       #(pUSB_CLOCK_PERIOD*10);
 
-      write_bytes(0, 16, `REG_CRYPT_TEXTIN, {32'h12345678, 32'habcdef01, 32'h87654321, 32'hdeadbeef});
-      write_bytes(0, 16, `REG_CRYPT_KEY, {32'habcdef01, 32'h12345678, 32'hdeadbeef, 32'h87654321});
+      write_bytes(0, 16, `REG_NN_INPUTS, {4'b1010});
+      write_bytes(0, 16, `REG_NN_WEIGHTS, {4'b1111});
+      write_bytes(0, 16, `REG_NN_BIAS, {4'b1111});
 
-      $display("Encrypting via register...");
-      write_byte(0, `REG_CRYPT_GO, 0, 1);
+      $display("Writing register...");
       repeat (5) @(posedge usb_clk);
-      wait_done();
-      read_bytes(0, 16, `REG_CRYPT_CIPHEROUT, read_data);
+      // wait_done();
+      read_bytes(0, 16, `REG_NN_RES, read_data);
       if (read_data == expected_cipher) begin
-         $display("Good result");
-      end
-      else begin
-         errors += 1;
-         $display("ERROR: expected %h", expected_cipher);
-         $display("            got %h", read_data);
+         $display("Result: %b", read_data);
       end
 
 
-      $display("Encrypting via usb_trigger (USB clock disabled)...");
-      write_bytes(0, 1, `REG_CRYPT_TEXTIN, 8'h01);
-      expected_cipher = 128'h0efee0bff4cf170752994fb45bd45934;
-      usb_clk_enable = 1'b0;
-      @(posedge usb_clk) usb_trigger = 1'b1;
-      repeat (10) @(posedge usb_clk); 
-      usb_trigger = 1'b0;
-      repeat (30) @(posedge pll_clk1);
-      usb_clk_enable = 1'b1;
+      write_bytes(0, 1, `REG_NN_INPUTS, {4'b1010});
+      write_bytes(0, 1, `REG_NN_WEIGHTS, {4'b1111});
+      write_bytes(0, 1, `REG_NN_BIAS, {4'b1111});
+
+
+      $display("Writing register...");
       repeat (5) @(posedge usb_clk);
-      wait_done();
-      read_bytes(0, 16, `REG_CRYPT_CIPHEROUT, read_data);
+      // wait_done();
+      read_bytes(0, 1, `REG_NN_RES, read_data);
       if (read_data == expected_cipher) begin
-         $display("Good result");
+         $display("Result: %b", read_data);
       end
-      else begin
-         errors += 1;
-         $display("ERROR: expected %h", expected_cipher);
-         $display("            got %h", read_data);
-      end
-
-
-      $display("Encrypting via usb_trigger (USB clock enabled)...");
-      write_bytes(0, 1, `REG_CRYPT_TEXTIN, 8'h02);
-      expected_cipher = 128'h8623e205b50bede46f795d1aad15faae;
-      @(posedge usb_clk) usb_trigger = 1'b1;
-      repeat (10) @(posedge usb_clk); 
-      usb_trigger = 1'b0;
-      repeat (30) @(posedge pll_clk1);
-      repeat (5) @(posedge usb_clk);
-      wait_done();
-      read_bytes(0, 16, `REG_CRYPT_CIPHEROUT, read_data);
-      if (read_data == expected_cipher) begin
-         $display("Good result");
-      end
-      else begin
-         errors += 1;
-         $display("ERROR: expected %h", expected_cipher);
-         $display("            got %h", read_data);
-      end
-
-      $display("Encrypting via usb_trigger (USB clock disabled, returns mid-encryption)...");
-      write_bytes(0, 1, `REG_CRYPT_TEXTIN, 8'h03);
-      expected_cipher = 128'h46be87df4d18bfe6d0d1d3b20b6bf382;
-      usb_clk_enable = 1'b0;
-      @(posedge usb_clk) usb_trigger = 1'b1;
-      repeat (2) @(posedge usb_clk); 
-      usb_trigger = 1'b0;
-      repeat (2) @(posedge pll_clk1);
-      usb_clk_enable = 1'b1;
-      repeat (1) @(posedge usb_clk);
-      wait_done();
-      read_bytes(0, 16, `REG_CRYPT_CIPHEROUT, read_data);
-      if (read_data == expected_cipher) begin
-         $display("Good result");
-      end
-      else begin
-         errors += 1;
-         $display("ERROR: expected %h", expected_cipher);
-         $display("            got %h", read_data);
-      end
-
-
 
       $display("done!");
       #(pUSB_CLOCK_PERIOD*10);
@@ -250,7 +199,7 @@ module tb();
 
    wire trigger; // TODO: use it?
 
-   cw305_top #(
+   cw305_ml_top #(
       .pBYTECNT_SIZE            (pBYTECNT_SIZE),
       .pADDR_WIDTH              (pADDR_WIDTH)
    ) U_dut (
@@ -266,24 +215,14 @@ module tb();
       .k15_sel                  (k15_sel),
       .l14_sel                  (l14_sel),
       .pushbutton               (pushbutton),
-      .led1                     (led1),
-      .led2                     (led2),
-      .led3                     (led3),
-      .pll_clk1                 (pll_clk1),
-      .tio_trigger              (trigger),
-      .tio_clkout               (),             // unused
+      // .led1                     (led1),
+      // .led2                     (led2),
+      // .led3                     (led3),
+      // .pll_clk1                 (pll_clk1),
+      // .tio_trigger              (trigger),
+      // .tio_clkout               (1'b1),             // unused
       .tio_clkin                (tio_clkin)
    );
-
-
-   task wait_done;
-      bit busy;
-      busy = 1;
-      while (busy == 1) begin
-         //$display("checking busy...");
-         read_byte(0, `REG_CRYPT_GO, 0, busy);
-      end
-   endtask
 
 
 endmodule

@@ -1,6 +1,9 @@
 tb.v
-../../ml/cw305_ml/cw305_ml.srcs/sources_1/new/cw305_top.v
-../../ml/cw305_ml/cw305_ml.srcs/sources_1/cw305_reg_aes.v
-../../ml/cw305_ml/cw305_ml.srcs/sources_1/cw305_usb_reg_fe.v
+../cw305_ml/cw305_ml.srcs/sources_1/new/cw305_ml_top.v
+../cw305_ml/cw305_ml.srcs/sources_1/cw305_reg_aes.v
+../cw305_ml/cw305_ml.srcs/sources_1/cw305_usb_reg_fe.v
+../cw305_ml/cw305_ml.srcs/sources_1/cw305_ml_defines.v
+../cw305_ml/cw305_ml.srcs/sources_1/BNN_MLP.v
+../cw305_ml/cw305_ml.srcs/sources_1/BNN_Neuron.v
 ../../common/clocks.v
 ../../common/cdc_pulse.v

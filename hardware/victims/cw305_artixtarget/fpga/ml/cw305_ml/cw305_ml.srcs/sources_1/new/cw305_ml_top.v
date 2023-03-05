@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 `timescale 1ns / 1ps
-`include "../cw305_ml_defines.v"
+`include "cw305_ml_defines.v"
 
 module cw305_ml_top #(
     parameter pBYTECNT_SIZE = 8,
@@ -32,7 +32,6 @@ module cw305_ml_top #(
     parameter pOUTPUTCNT = 4,
     parameter pBIASCNT = 1
 )(
-
     // USB Interface
     input wire                          usb_clk,        // Clock
     inout wire [7:0]                    usb_data,       // Data for write/read
@@ -76,8 +75,7 @@ module cw305_ml_top #(
     wire reg_read;
     wire reg_write;
     wire [4:0] clk_settings;
-    wire crypt_clk;    
-
+    
     wire resetn = pushbutton;
     wire reset = !resetn;
 
