@@ -26,7 +26,7 @@ set_property PACKAGE_PIN K15 [get_ports k15_sel]
 
 #set_property PACKAGE_PIN M16 [get_ports tio_clkout]
 
-#set_property PACKAGE_PIN N14 [get_ports tio_clkin]
+set_property PACKAGE_PIN N14 [get_ports tio_clkin]
 
 ####### USB Connector
 

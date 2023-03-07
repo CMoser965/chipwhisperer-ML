@@ -96,7 +96,7 @@ module cw305_ml_top #(
         .usb_wrn                 (usb_wrn),
         .usb_cen                 (usb_cen),
         .usb_alen                (1'b0),                 // unused
-        .usb_addr                (usb_addr), 
+        .usb_addr                (usb_addr),
         .usb_isout               (isout), 
         .reg_address             (reg_address), 
         .reg_bytecnt             (reg_bytecnt), 
@@ -155,8 +155,8 @@ module cw305_ml_top #(
 
       // Register output read data to ease timing. If you need read data one clock 
    // cycle earlier, simply remove this stage:
-   always @(posedge usb_clk)
-      read_data <= reg_read_data;
+//   always @(posedge usb_clk)
+   assign read_data = reg_read_data;
 
    //////////////////////////////////
    // write logic (USB clock domain):

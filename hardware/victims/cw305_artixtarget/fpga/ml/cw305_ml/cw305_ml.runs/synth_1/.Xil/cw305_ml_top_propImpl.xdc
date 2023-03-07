@@ -5,6 +5,8 @@ set_property src_info {type:XDC file:1 line:16 export:INPUT save:INPUT read:READ
 set_property PACKAGE_PIN K16 [get_ports k16_sel]
 set_property src_info {type:XDC file:1 line:17 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN K15 [get_ports k15_sel]
+set_property src_info {type:XDC file:1 line:29 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN N14 [get_ports tio_clkin]
 set_property src_info {type:XDC file:1 line:33 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN F5 [get_ports usb_clk]
 set_property src_info {type:XDC file:1 line:36 export:INPUT save:INPUT read:READ} [current_design]

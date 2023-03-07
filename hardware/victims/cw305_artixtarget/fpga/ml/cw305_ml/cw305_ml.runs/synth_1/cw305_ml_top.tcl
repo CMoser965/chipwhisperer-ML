@@ -70,10 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 6
-set_param checkpoint.writeSynthRtdsInDcp 1
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tftg256-2
 
@@ -88,11 +84,14 @@ set_property ip_output_repo /home/chmoser/chipwhisperer-ML/hardware/victims/cw30
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
+read_verilog /home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/sources_1/imports/ml/cw305_ml/cw305_ml.srcs/sources_1/cw305_ml_defines.v
+set_property file_type "Verilog Header" [get_files /home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/sources_1/imports/ml/cw305_ml/cw305_ml.srcs/sources_1/cw305_ml_defines.v]
 read_verilog -library xil_defaultlib {
-  /home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/sources_1/BNN_MLP.v
-  /home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/sources_1/BNN_Neuron.v
-  /home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/sources_1/cw305_usb_reg_fe.v
-  /home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/sources_1/new/cw305_ml_top.v
+  /home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/sources_1/imports/ml/cw305_ml/cw305_ml.srcs/sources_1/BNN_MLP.v
+  /home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/sources_1/imports/ml/cw305_ml/cw305_ml.srcs/sources_1/BNN_Neuron.v
+  /home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/sources_1/imports/common/clocks.v
+  /home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/sources_1/imports/ml/cw305_ml/cw305_ml.srcs/sources_1/cw305_usb_reg_fe.v
+  /home/chmoser/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/sources_1/imports/ml/cw305_ml/cw305_ml.srcs/sources_1/new/cw305_ml_top.v
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
