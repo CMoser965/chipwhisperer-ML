@@ -50,12 +50,6 @@ module cw305_reg_ml #(
                                                                  // present on write_data
    input  wire                                  reg_addrvalid    // Address valid flag
 
-// register inputs:         
-   //   input  wire [pINPUTCNT-1:0]                inputs,
-   //   input  wire [pBIASCNT-1:0]                 bias,
-   //   input  wire [pWEIGHTCNT-1:0]               weights,
-// register outputs:
-   // output   wire [pOUTPUTCNT-1:0]               outputs
 );
 
    reg  [7:0]                   reg_read_data;
@@ -73,10 +67,9 @@ module cw305_reg_ml #(
    // read logic:
    //////////////////////////////////
 
-   always @(*) begin
+   always @(reg_bytecnt) begin
       if (reg_addrvalid && reg_read) begin
          case (reg_address)
-            // `REG_BUILDTIME:             reg_read_data = buildtime[reg_bytecnt*8 +: 8];
             `REG_NN_INPUTS:             reg_read_data = inputs[reg_bytecnt*8 +: 8];
             `REG_NN_WEIGHTS:            reg_read_data = weights[reg_bytecnt*8 +: 8];
             `REG_NN_BIAS:               reg_read_data = bias[reg_bytecnt*8 +: 8];
@@ -97,10 +90,9 @@ module cw305_reg_ml #(
    // write logic (USB clock domain):
    //////////////////////////////////
 
-   always @(*) begin
+   always @(reg_bytecnt) begin
       if (reg_addrvalid && reg_write) begin
          case (reg_address)
-            // `REG_BUILDTIME:          buildtime[reg_bytecnt*8 +: 8] <= write_data;
             `REG_NN_INPUTS:          inputs[reg_bytecnt*8 +: 8]    <= write_data;
             `REG_NN_WEIGHTS:         weights[reg_bytecnt*8 +: 8]   <= write_data;
             `REG_NN_BIAS:            bias[reg_bytecnt*8 +: 8]      <= write_data;
