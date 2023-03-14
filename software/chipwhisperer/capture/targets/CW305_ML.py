@@ -45,8 +45,8 @@ class CW305_ML(CW305):
         
         self._woffset_sam3U = 0x000
         self.default_verilog_defines = 'cw305_ml_defines.v'
-        self.default_verilog_defines_full_path = os.path.dirname(cw.__file__)+ '/../../hardware/victims/cw305_artixtarget/fpga/ml/cw305_ml/cw305_ml.srcs/sources_1/' + self.default_verilog_defines
-        self.registers = 11 # number of registers we expect to find
+        self.default_verilog_defines_full_path = os.path.dirname(cw.__file__)+ '/../../hardware/victims/cw305_artixtarget/fpga/ml/cw305_verilog_files/src/' + self.default_verilog_defines
+        self.registers = 8 # number of registers we expect to find
         self.bytecount_size = 2 # pBYTECNT_SIZE in Verilog
         self.target_name =  'Binary Neural Network'
 
@@ -169,6 +169,7 @@ class CW305_ML(CW305):
             if fpga_id not in ('100t'):
                 raise ValueError(f"Invalid fpga {fpga_id}")
         self._fpga_id = fpga_id
+        print(self.fpga)
         if self.fpga.isFPGAProgrammed() == False or force:
             if bsfile is None:
                 if not fpga_id is None:
@@ -181,6 +182,9 @@ class CW305_ML(CW305):
                     if status:
                         target_logger.info('FPGA Config OK, time: %s' % str(stoptime - starttime))
                     else:
+                        print("\n\n\n\n\nstatus", status)
+                        print("self.fpga", self.fpga)
+                        print("bsfile", bsfile)
                         target_logger.error('FPGA Done pin failed to go high, check bitstream is for target device.')
                 else:
                     target_logger.warning("No FPGA Bitstream file specified.")
@@ -188,11 +192,14 @@ class CW305_ML(CW305):
                 target_logger.warning(("FPGA Bitstream not configured or '%s' not a file." % str(bsfile)))
             else:
                 starttime = datetime.now()
-                status = self.fpga.FPGAProgram(open(bsfile, "rb"), exceptOnDoneFailure=False, prog_speed=prog_speed)
+                status = self.fpga.FPGAProgram(bitstream=open(bsfile, "rb"), exceptOnDoneFailure=False, prog_speed=prog_speed)
                 stoptime = datetime.now()
                 if status:
                     target_logger.info('FPGA Config OK, time: %s' % str(stoptime - starttime))
                 else:
+                    print("\n\n\n\n\nstatus", status)
+                    print("self.fpga", self.fpga)
+                    print("bsfile", bsfile)
                     target_logger.warning('FPGA Done pin failed to go high, check bitstream is for target device.')
 
         self.usb_clk_setenabled(True)

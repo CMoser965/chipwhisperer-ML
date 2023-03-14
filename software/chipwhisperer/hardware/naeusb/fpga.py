@@ -47,7 +47,7 @@ class FPGA(object):
         """
 
         status = self.readCtrl(self.CMD_FPGA_STATUS, dlen=4)
-
+        print("\n\n\nFPGA:50:status:",status)
         if status[0] & 0x01:
             return True
         else:
@@ -84,7 +84,9 @@ class FPGA(object):
         time.sleep(0.001)
 
         # Download actual bitstream now if present
+        print(">>>>>>FPGA:87:Bitstream:\t", bitstream)
         if bitstream:
+            print("bitstream:", bitstream)
             # Run the download which should program FPGA
             self._FPGADownloadBitstream(bitstream, starting_offset=starting_offset)
 
@@ -92,6 +94,7 @@ class FPGA(object):
             while wait > 0:
                 # Check the status a few times
                 programStatus = self.isFPGAProgrammed()
+                print(">>>>FPGA:97:programStatus:", programStatus)
                 if programStatus:
                     break
                 time.sleep(0.001)
@@ -106,6 +109,7 @@ class FPGA(object):
 
             return programStatus
         else:
+            print("No bitstream detected!")
             # No bitstream, exit programming mode
             self.sendCtrl(self.CMD_FPGA_PROGRAM, self._prog_mask | 0x02)
             return False

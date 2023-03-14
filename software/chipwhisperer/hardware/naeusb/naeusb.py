@@ -485,6 +485,10 @@ class NAEUSB_Backend:
         """
         # Vendor-specific, IN, interface control transfer
         response = self.handle.controlRead(0xC1, cmd, value, 0, dlen, timeout=self._timeout)
+#         print("Device:", self.handle)
+        print("READ_CTRL: bmRequestType: {:02X}, \
+                    bRequest: {:02X}, wValue: {:04X}, wIndex: {:04X}, data_len: {:04X}, response: {}".format(0xC1, cmd, \
+                        value, 0, dlen, response))
         naeusb_logger.debug("READ_CTRL: bmRequestType: {:02X}, \
                     bRequest: {:02X}, wValue: {:04X}, wIndex: {:04X}, data_len: {:04X}, response: {}".format(0xC1, cmd, \
                         value, 0, dlen, response))
