@@ -56,10 +56,6 @@ module cw305_top #(
     output wire                         led2,           // green LED
     output wire                         led3,           // blue LED
 
-    // PLL
-   //  input wire                          pll_clk1,       //PLL Clock Channel #1
-    //input wire                        pll_clk2,       //PLL Clock Channel #2 (unused in this example)
-
     // 20-Pin Connector Stuff
     output wire                         tio_trigger,
     output wire                         tio_clkout,

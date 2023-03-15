@@ -235,7 +235,7 @@ class CW305_ML(CW305):
             return
         self.input = inputtext
         text = inputtext[::-1]
-        self.fpga_write(self.REG_NN_INPUTS, text)
+        self.sam3u_write(self.REG_NN_INPUTS, text)
         
     def loadWeights(self, weights):
         
@@ -244,7 +244,7 @@ class CW305_ML(CW305):
             return
         self.weights = weights
         weights = weights[::-1]
-        self.fpga_write(self.REG_NN_WEIGHTS, weights)
+        self.sam3u_write(self.REG_NN_WEIGHTS, weights)
 
         
     def readOutputs(self):
