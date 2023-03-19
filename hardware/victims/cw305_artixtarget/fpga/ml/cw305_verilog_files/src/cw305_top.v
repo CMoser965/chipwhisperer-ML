@@ -78,10 +78,6 @@ module cw305_top #(
     wire reset = !resetn;
 
 
-    // USB CLK Heartbeat
-    reg [24:0] usb_timer_heartbeat;
-    always @(posedge usb_clk_buf) usb_timer_heartbeat <= usb_timer_heartbeat +  25'd1;
-    assign led1 = usb_timer_heartbeat[24];
 
 
     cw305_usb_reg_fe #(
