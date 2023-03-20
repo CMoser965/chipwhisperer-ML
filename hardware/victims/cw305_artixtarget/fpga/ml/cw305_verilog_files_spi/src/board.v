@@ -28,23 +28,25 @@ either expressed or implied, of NewAE Technology Inc.
 `timescale 1ns / 1ps
 `default_nettype none 
 
-module cw305_top(
+module cw305_top #(
+    parameter pBYTECNT_SIZE  = 7,
+    parameter pADDR_WIDTH    = 21
+ )(
     
     /****** USB Interface ******/
-    input wire        usb_clk, /* Clock */
-    
-//    input wire        usb_spare1, /* Routes to MOSI pin on SPI Flash */
-//    input wire        usb_spare2, /* Routes to CS pin on SPI Flash */
+    // USB Interface
+    input wire                          usb_clk,        // Clock
+    inout wire [7:0]                    usb_data,       // Data for write/read
+    input wire [pADDR_WIDTH-1:0]        usb_addr,       // Address
+    input wire                          usb_rdn,        // !RD, low when addr valid for read
+    input wire                          usb_wrn,        // !WR, low when data+addr valid for write
+    input wire                          usb_cen,        // !CE, active low chip enable
+    input wire                          usb_trigger,    // High when trigger requested
 
-    input wire         usb_a20, /* PICO command*/
-    input wire         usb_a19, /* POCI command*/
-    input wire         usb_a18, /* SCLK command*/
-    input wire         usb_a17, /* CS   command*/
-
-    output reg         usb_a16, /* Res3 command*/
-    output reg         usb_a15, /* Res2 command*/
-    output reg         usb_a14, /* Res1 command*/
-    output reg         usb_a13, /* Res0 command*/
+    // input wire         usb_a20, /* PICO command*/
+    // input wire         usb_a19, /* POCI command*/
+    // input wire         usb_a18, /* SCLK command*/
+    // input wire         usb_a17, /* CS   command*/
     
     /****** SPI Interface *****/
     //input wire        flash_din, //Not used - routes to SAM3U already
@@ -64,111 +66,112 @@ module cw305_top(
     );
     
     wire usb_clk_buf;
+    wire [7:0] usb_dout;
+    wire isout;
+    wire [pADDR_WIDTH-pBYTECNT_SIZE-1:0] reg_address;
+    wire [pBYTECNT_SIZE-1:0] reg_bytecnt;
+    wire reg_addrvalid;
+    wire [7:0] write_data;
+    wire [7:0] read_data;
+    wire reg_read;
+    wire reg_write;
+    wire [4:0] clk_settings;
+
+    wire resetn = pushbutton;
+    wire reset = !resetn;
     
     wire cs;
     wire pico;
     wire poci;
     wire sclk;
+    wire done;
 
-    reg rst_reg;
-    reg rst;
-    wire valid_data_tx;
-    wire[7:0] tx_byte;
+    cw305_usb_reg_fe #(
+       .pBYTECNT_SIZE           (pBYTECNT_SIZE),
+       .pADDR_WIDTH             (pADDR_WIDTH)
+    ) U_usb_reg_fe (
+       .rst                     (reset),
+       .usb_clk                 (usb_clk_buf), 
+       .usb_din                 (usb_data), 
+       .usb_dout                (usb_dout), 
+       .usb_rdn                 (usb_rdn), 
+       .usb_wrn                 (usb_wrn),
+       .usb_cen                 (usb_cen),
+       .usb_alen                (1'b0),                 // unused
+       .usb_addr                (usb_addr),
+       .usb_isout               (isout), 
+       .reg_address             (reg_address), 
+       .reg_bytecnt             (reg_bytecnt), 
+       .reg_datao               (write_data), 
+       .reg_datai               (read_data),
+       .reg_read                (reg_read), 
+       .reg_write               (reg_write), 
+       .reg_addrvalid           (reg_addrvalid)
+    );
     
-    reg  valid_data_rx;
-    reg [7:0] rx_byte;
-    reg [7:0] tx_byte_origin;
-
-    reg [3:0] inputs;
-    reg [3:0] outputs;
-    reg [15:0] bias;
-    reg [15:0] weights;
-
-    reg [7:0] addr_reg;
-    reg [3:0] data_reg [7:0];
-
-    reg [2:0] cycle;
+    wire [7:0] results;
     
-    
-    assign cs = usb_a17;
-    assign pico = usb_a20;
-    assign poci = usb_a19;
-    assign sclk = usb_a18;
+    assign cs = usb_addr[17];
+    assign pico = usb_addr[20];
+    assign poci = usb_addr[19];
+    assign sclk = usb_addr[18];
 
-    initial begin
-        cycle <= 3'b000;
-        rst <= 1'b1;
-    end
-    
+    SIPO_Register data_byte(
+        .clk(sclk),
+        .si(poci),
+        .po(results),
+        .en_L(done)
+    );
+
+    spi_peripheral peripheral_interface(
+        .sclk(sclk),
+        .cs(cs),
+        .pico(pico),
+        .poci(poci),
+        .done(done)
+    );
     /* USB CLK Heartbeat */
     reg [24:0] usb_timer_heartbeat;
     always @(posedge usb_clk_buf) usb_timer_heartbeat <= usb_timer_heartbeat +  25'd1;
     assign led1 = usb_timer_heartbeat[24];
+
+    reg r_led4;
+    reg r_led5;
+    reg r_led6;
     
-    assign valid_data_tx = 1'b1;
-    assign rst = rst_reg;
+    always @(done) begin
+        case(results)
+            8'h11:  begin
+                r_led4 <= 1;
+                r_led5 <= 1;
+                r_led6 <= 1;
+            end
+            8'h12:  
+            begin
+                r_led4 <= 1;
+                r_led5 <= 0;
+                r_led6 <= 1;
+            end
+            8'h13:  begin
+                r_led4 <= 1;
+                r_led5 <= 0;
+                r_led6 <= 0;
+            end
+            8'h14:  begin
+                r_led4 <= 0;
+                r_led5 <= 0;
+                r_led6 <= 1;
+            end
+        endcase
+    end
+
+    assign led1 = r_led4;
+    assign led2 = r_led5;
+    assign led3 = r_led6;
     
-    spi_peripheral #(.SPI_MODE(0)) peripheral_interface (// Control/Data Signals,
-        .i_Rst_L(rst),    // FPGA Reset, active low
-        .i_Clk(usb_clk),      // FPGA Clock
-        .o_RX_DV(valid_data_rx),    // Data Valid pulse (1 clock cycle)
-        .o_RX_Byte(rx_byte),  // Byte received on MOSI
-        .i_TX_DV(valid_data_tx),    // Data Valid pulse to register i_TX_Byte
-        .i_TX_Byte(tx_byte),  // Byte to serialize to MISO.
-   
-    // SPI Interface
-    .i_SPI_Clk(sclk),
-    .o_SPI_MISO(poci),
-    .i_SPI_MOSI(pico),
-    .i_SPI_CS_n(cs)        // active low
+    clocks U_clocks (
+      .usb_clk(clk),
+      .usb_clk_buf(buf_clk)
     );
-
-    BNN_MLP bnn(
-        .Input(inputs),
-        .Bias(bias),
-        .Weights(weights),
-        .Result(outputs)
-    );
-    
-
-    always @(posedge valid_data_rx) begin
-        
-        if(cycle == 3'b000) begin
-            cycle <= cycle + 1'b1;
-            addr_reg <= rx_byte;
-        end
-        else if(cycles < 3'b100) begin
-            cycle <= cycle + 1'b1;
-            data_reg[cycles] <= rx_byte;
-        end
-        else begin
-            case (addr_reg)
-                    8'h01:      inputs <= data_reg[1][3:0];
-                    8'h02:      bias <= data_reg[1:0];
-                    8'h03:      weights <= data_reg[1:0];
-                    8'h04:      rx_byte <= results;
-            endcase
-            cycles <= 3'b000;
-        end
-
-        rst_reg <= 1'b0;
-    end
-
-    always @(posedge rst_reg) begin
-    addr_reg <= 8'b0;
-    end
-
-    always @(negedge valid_data_rx) begin
-        rst_reg <= 1'b1;
-    end
-
-    always @(results) begin
-        usb_a13 <= results[0];
-        usb_a14 <= results[1];
-        usb_a15 <= results[2];
-        usb_a16 <= results[3];
-        rst_reg <= 1'b0;
-    end
-
     
 endmodule

@@ -2,14 +2,14 @@
 ######## HARDWARE ON BOARD
 
 #LEDs
-#set_property DRIVE 8 [get_ports led1]
-#set_property PACKAGE_PIN T2 [get_ports led1]
+set_property DRIVE 8 [get_ports led1]
+set_property PACKAGE_PIN T2 [get_ports led1]
 
-#set_property DRIVE 8 [get_ports led2]
-#set_property PACKAGE_PIN T3 [get_ports led2]
+set_property DRIVE 8 [get_ports led2]
+set_property PACKAGE_PIN T3 [get_ports led2]
 
-#set_property DRIVE 8 [get_ports led3]
-#set_property PACKAGE_PIN T4 [get_ports led3]
+set_property DRIVE 8 [get_ports led3]
+set_property PACKAGE_PIN T4 [get_ports led3]
 
 #Switch's
 set_property PACKAGE_PIN J16 [get_ports j16_sel]
