@@ -3,7 +3,8 @@ module PISO_Register(
     input wire load,
     input wire [7:0] pi,
     output wire so,
-    input wire en_L
+    input wire en_L,
+    input wire rst
 );
 
 reg [7:0] tmp = 8'b0;
