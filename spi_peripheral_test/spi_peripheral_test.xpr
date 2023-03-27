@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="61" Path="C:/Users/mathm/spi_peripheral_test/spi_peripheral_test.xpr">
+<Project Version="7" Minor="61" Path="C:/Users/mathm/chipwhisperer-ML/spi_peripheral_test/spi_peripheral_test.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="fa295ec4eec94f30b5c6959ab47a6c53"/>
@@ -97,6 +97,27 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/top.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/decoder.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../hardware/victims/cw305_artixtarget/fpga/ml/cw305_verilog_files_spi/src/bnn/BNN_Neuron.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../hardware/victims/cw305_artixtarget/fpga/ml/cw305_verilog_files_spi/src/bnn/BNN_MLP.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>

@@ -12,47 +12,28 @@ module top (
 );
 
 reg[7:0] command;
+reg[7:0] miso_r;
+reg[7:0] outputs;
 
-SPI_Slave DUT(
-    .rst(reset),
+SPI_Slave interfacer(
     .SCLK(clk),
     .MOSI(MOSI),
-    .MISO(MISO),
     .CS(CS),
     .command(command)
 );
 
-always_comb begin
-    
-    case(command)
-        8'h01: begin
-            led1 = 1'b1;
-            led2 = 1'b0;
-            led3 = 1'b0;
-        end
-        8'h02: begin
-            led1 = 1'b1;
-            led2 = 1'b1;
-            led3 = 1'b0;
-        end
-        8'h03: begin
-            led1 = 1'b1;
-            led2 = 1'b0;
-            led3 = 1'b1;
-        end
-        8'h04: begin
-            led1 = 1'b1;
-            led2 = 1'b1;
-            led3 = 1'b1;
-        end
-        default: begin
-            led1 = MISO;
-            led2 = MOSI;
-            led3 = CS;
-        end
+decoder DUT(
+    .cmd(command),
+    .outs(outputs)
+);
 
-    endcase
+always @(posedge clk & ~CS) begin
+    MISO <= miso_r[0];
+    miso_r <= miso_r >> 1;
+end
 
+always @(posedge CS) begin
+    miso_r <= outputs;
 end
 
 

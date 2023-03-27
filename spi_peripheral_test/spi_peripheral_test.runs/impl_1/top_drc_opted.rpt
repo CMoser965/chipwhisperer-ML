@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Sat Mar 25 14:01:16 2023
-| Host         : DESKTOP-O2SFG2L running 64-bit major release  (build 9200)
+| Date         : Mon Mar 27 01:24:23 2023
+| Host         : SpectreGolem running 64-bit major release  (build 9200)
 | Command      : report_drc -file top_drc_opted.rpt -pb top_drc_opted.pb -rpx top_drc_opted.rpx
 | Design       : top
 | Device       : xc7a100tftg256-2
@@ -25,20 +25,23 @@ Table of Contents
            Ruledeck: default
              Max violations: <unlimited>
              Violations found: 1
-+-------------+----------+-------------------------------------------------------------+------------+
-| Rule        | Severity | Description                                                 | Violations |
-+-------------+----------+-------------------------------------------------------------+------------+
-| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 1          |
-+-------------+----------+-------------------------------------------------------------+------------+
++---------+----------+---------------------+------------+
+| Rule    | Severity | Description         | Violations |
++---------+----------+---------------------+------------+
+| PLCK-12 | Warning  | Clock Placer Checks | 1          |
++---------+----------+---------------------+------------+
 
 2. REPORT DETAILS
 -----------------
-PLHOLDVIO-2#1 Warning
-Non-Optimal connections which could lead to hold violations  
-A LUT DUT/MISO_i_2 is driving clock pin of 9 cells. This could lead to large hold time violations. Involved cells are:
-DUT/MISO_reg, DUT/command_reg[0], DUT/command_reg[1], DUT/command_reg[2],
-DUT/command_reg[3], DUT/command_reg[4], DUT/command_reg[5],
-DUT/command_reg[6], DUT/command_reg[7]
+PLCK-12#1 Warning
+Clock Placer Checks  
+Poor placement for routing between an IO pin and BUFG. 
+Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
+ This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
+
+	clk_IBUF_inst (IBUF.O) is locked to D6
+	clk_IBUF_BUFG_inst (BUFG.I) cannot be placed
+
 Related violations: <none>
 
 

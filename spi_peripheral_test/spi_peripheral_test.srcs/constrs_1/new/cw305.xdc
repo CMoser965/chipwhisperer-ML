@@ -43,3 +43,4 @@ set_property CONFIG_VOLTAGE 3.3 [current_design]
 # Bitstream generation
 # --------------------------------------------------
 set_property BITSTREAM.CONFIG.SPI_BUSWIDTH 4 [current_design]
+set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets clk_IBUF]
