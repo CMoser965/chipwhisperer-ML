@@ -1,0 +1,270 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/mathm/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_verilog_files_spi/src/bnn
+T_opt
+Z1 !s110 1680079561
+V4RA11nQjGB?IXW8?Qf3H[2
+04 10 4 work decoder_tb fast 0
+=1-d4548b51d9bb-6423fac9-17a-6258
+o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;10.7f;67
+vBNN_BIAS
+Z3 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+Z4 DXx4 work 7 BNN_PKG 0 22 V[OPBmeBS4@<F>J79]=>o2
+R1
+!i10b 1
+!s100 Y9TAH_KjQIg<8b=EGHQ>?1
+IKXL[APK0J]nBOFT0Vh<l03
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 !s105 BNN_MLP_sv_unit
+S1
+R0
+Z7 w1680079541
+Z8 8BNN_MLP.sv
+Z9 FBNN_MLP.sv
+L0 25
+Z10 OL;L;10.7f;67
+r1
+!s85 0
+31
+Z11 !s108 1680079561.000000
+Z12 !s107 decoder_tb.sv|decoder.sv|BNN_Neuron.sv|BNN_MLP.sv|
+Z13 !s90 -reportprogress|300|BNN_MLP.sv|BNN_Neuron.sv|decoder.sv|decoder_tb.sv|
+!i113 0
+Z14 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+n@b@n@n_@b@i@a@s
+vBNN_INPUT
+R3
+R4
+R1
+!i10b 1
+!s100 H>SjS9niM]K@7>j3>[`:g2
+IzJBlnib2iBkbbdN0FSc?Z0
+R5
+R6
+S1
+R0
+R7
+R8
+R9
+L0 20
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R2
+n@b@n@n_@i@n@p@u@t
+vBNN_MLP
+R3
+R4
+R1
+!i10b 1
+!s100 Pbz:m6:c;OaY[Q1X2g3lO1
+I;_M?]CMi1KKhRQQV6cRBc2
+R5
+R6
+S1
+R0
+R7
+R8
+R9
+L0 8
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R2
+n@b@n@n_@m@l@p
+vBNN_Neuron
+R3
+R1
+!i10b 1
+!s100 6:bJ1`[6cz@HFaY@Ce`GL0
+IaW1AIdS[1Yah?U;ElQMHc0
+R5
+Z15 !s105 BNN_Neuron_sv_unit
+S1
+R0
+Z16 w1680079539
+Z17 8BNN_Neuron.sv
+Z18 FBNN_Neuron.sv
+L0 17
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R2
+n@b@n@n_@neuron
+XBNN_PKG
+R3
+R1
+!i10b 1
+!s100 @DTV@Q_@]2doN[N[2EROD2
+IV[OPBmeBS4@<F>J79]=>o2
+VV[OPBmeBS4@<F>J79]=>o2
+S1
+R0
+R7
+R8
+R9
+L0 1
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R2
+n@b@n@n_@p@k@g
+vBNN_WEIGHTS
+R3
+R4
+R1
+!i10b 1
+!s100 KL9lnOYdb4IOL7Uojb3De3
+IPofI65NAKJ4408T7AC40_3
+R5
+R6
+S1
+R0
+R7
+R8
+R9
+L0 30
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R2
+n@b@n@n_@w@e@i@g@h@t@s
+vdecoder
+R3
+R1
+!i10b 1
+!s100 VU:2oBoF?XZPUd5^J1z;60
+IUXDjEHKOnUHODe8fmBz5Z1
+R5
+!s105 decoder_sv_unit
+S1
+R0
+w1680079543
+8decoder.sv
+Fdecoder.sv
+L0 22
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R2
+vdecoder_tb
+R3
+R1
+!i10b 1
+!s100 JCR@BPMHU@>79UZ3b=]DS2
+IEzX231UXm6ebOkCQObD8P2
+R5
+!s105 decoder_tb_sv_unit
+S1
+R0
+w1680079215
+8decoder_tb.sv
+Fdecoder_tb.sv
+L0 3
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R2
+vFA
+R3
+R1
+!i10b 1
+!s100 9X1AAMk7_GIH4S>SQX@3^1
+InY0z?X:gci;^J[0PKCl]a0
+R5
+R15
+S1
+R0
+R16
+R17
+R18
+L0 9
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R2
+n@f@a
+vHA
+R3
+R1
+!i10b 1
+!s100 DTM>4;A>[=CL5G>ihzo^]1
+IZLGE3kW?V8zdBLNgaATU>3
+R5
+R15
+S1
+R0
+R16
+R17
+R18
+L0 1
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R2
+n@h@a

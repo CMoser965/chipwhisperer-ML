@@ -36,10 +36,7 @@ view list
 view wave
 
 -- display input and output signals as hexidecimal values
-add wave -hex -r /clk
-add wave -hex -r /X
-add wave -hex -r /Y
-add wave -hex -r /Z
+add wave -hex -r /*
 
 -- Set Wave Output Items 
 TreeUpdate [SetDefaultTree]

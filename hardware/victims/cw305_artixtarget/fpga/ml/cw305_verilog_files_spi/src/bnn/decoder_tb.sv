@@ -5,7 +5,7 @@ module decoder_tb();
     always clk = #5 ~clk;
     integer seed = 500;
     
-    logic[7:0] cmd = 8'h11;
+    logic[7:0] cmd;
     logic[3:0] outs;
 
     decoder dec(cmd, outs);
@@ -23,17 +23,17 @@ module decoder_tb();
         //# 30 cmd = $urandom(seed + k*3)%256;
         //# 35 cmd = $urandom(seed + k*4)%256; // Bias
         //# 40 cmd = 8'h00; 
-        # 5 cmd = 8'hB1; // Write Inputs
-        # 10 cmd = 8'b00001110;
-        # 15 cmd = 8'h00;
-        # 20 cmd = 8'hB2; // Write Weights
-        # 25 cmd = 00000000;
-        # 30 cmd = 11011110; // Weight Values   
-        # 35 cmd = 8'h00;
-        # 40 cmd = 8'hB3; // Write Bias
-        # 45 cmd = 00000000;
-        # 50 cmd = 11011110; // Bias
-        # 55 cmd = 8'h00;  
+        // # 5 cmd = 8'hB1; // Write Inputs
+        # 5 cmd = 8'b00000111;
+        // # 15 cmd = 8'hAE;
+        // # 20 cmd = 8'hB2; // Write Weights
+        # 10 cmd = 11011111;
+        # 15 cmd = 00000000; // Weight Values   
+        // # 20 cmd = 8'hAE;
+        // # 40 cmd = 8'hB3; // Write Bias
+        # 20 cmd = 11011111;
+        # 25 cmd = 00000000; // Bias
+        // # 55 cmd = 8'hAE;  
     end
 
     always @(outs) begin
