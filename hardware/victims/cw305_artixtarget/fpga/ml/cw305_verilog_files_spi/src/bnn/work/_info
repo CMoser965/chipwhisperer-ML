@@ -9,262 +9,272 @@ z2
 cModel Technology
 Z0 dC:/Users/mathm/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/cw305_verilog_files_spi/src/bnn
 T_opt
-Z1 !s110 1680079561
-V4RA11nQjGB?IXW8?Qf3H[2
-04 10 4 work decoder_tb fast 0
-=1-d4548b51d9bb-6423fac9-17a-6258
-o-quiet -auto_acc_if_foreign -work work +acc
-Z2 tCvgOpt 0
+!s110 1680233399
+VS>R1cEO0SVF?S:k90=UTW2
+Z1 04 10 4 work decoder_tb fast 0
+=1-d4548b51d9bb-642653b7-299-6fac
+Z2 o-quiet -auto_acc_if_foreign -work work +acc
+Z3 tCvgOpt 0
 n@_opt
-OL;O;10.7f;67
-vBNN_BIAS
-Z3 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
-Z4 DXx4 work 7 BNN_PKG 0 22 V[OPBmeBS4@<F>J79]=>o2
+Z4 OL;O;10.7f;67
+R0
+T_opt1
+Z5 !s110 1680233530
+VzYaP84eKZ6L;1D>L0io`]0
 R1
+=1-d4548b51d9bb-6426543a-2bc-440
+R2
+R3
+n@_opt1
+R4
+vBNN_BIAS
+Z6 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+Z7 DXx4 work 7 BNN_PKG 0 22 V[OPBmeBS4@<F>J79]=>o2
+R5
 !i10b 1
 !s100 Y9TAH_KjQIg<8b=EGHQ>?1
 IKXL[APK0J]nBOFT0Vh<l03
-Z5 VDg1SIo80bB@j0V0VzS_@n1
-Z6 !s105 BNN_MLP_sv_unit
+Z8 VDg1SIo80bB@j0V0VzS_@n1
+Z9 !s105 BNN_MLP_sv_unit
 S1
 R0
-Z7 w1680079541
-Z8 8BNN_MLP.sv
-Z9 FBNN_MLP.sv
+Z10 w1680209416
+Z11 8BNN_MLP.sv
+Z12 FBNN_MLP.sv
 L0 25
-Z10 OL;L;10.7f;67
+Z13 OL;L;10.7f;67
 r1
 !s85 0
 31
-Z11 !s108 1680079561.000000
-Z12 !s107 decoder_tb.sv|decoder.sv|BNN_Neuron.sv|BNN_MLP.sv|
-Z13 !s90 -reportprogress|300|BNN_MLP.sv|BNN_Neuron.sv|decoder.sv|decoder_tb.sv|
+Z14 !s108 1680233530.000000
+Z15 !s107 decoder_tb.sv|decoder.sv|BNN_Neuron.sv|BNN_MLP.sv|
+Z16 !s90 -reportprogress|300|BNN_MLP.sv|BNN_Neuron.sv|decoder.sv|decoder_tb.sv|
 !i113 0
-Z14 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R2
+Z17 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
 n@b@n@n_@b@i@a@s
 vBNN_INPUT
-R3
-R4
-R1
+R6
+R7
+R5
 !i10b 1
 !s100 H>SjS9niM]K@7>j3>[`:g2
 IzJBlnib2iBkbbdN0FSc?Z0
-R5
-R6
-S1
-R0
-R7
 R8
 R9
-L0 20
+S1
+R0
 R10
+R11
+R12
+L0 20
+R13
 r1
 !s85 0
 31
-R11
-R12
-R13
-!i113 0
 R14
-R2
+R15
+R16
+!i113 0
+R17
+R3
 n@b@n@n_@i@n@p@u@t
 vBNN_MLP
-R3
-R4
-R1
+R6
+R7
+R5
 !i10b 1
 !s100 Pbz:m6:c;OaY[Q1X2g3lO1
 I;_M?]CMi1KKhRQQV6cRBc2
-R5
-R6
-S1
-R0
-R7
 R8
 R9
-L0 8
-R10
-r1
-!s85 0
-31
-R11
-R12
-R13
-!i113 0
-R14
-R2
-n@b@n@n_@m@l@p
-vBNN_Neuron
-R3
-R1
-!i10b 1
-!s100 6:bJ1`[6cz@HFaY@Ce`GL0
-IaW1AIdS[1Yah?U;ElQMHc0
-R5
-Z15 !s105 BNN_Neuron_sv_unit
 S1
 R0
-Z16 w1680079539
-Z17 8BNN_Neuron.sv
-Z18 FBNN_Neuron.sv
-L0 17
 R10
+R11
+R12
+L0 8
+R13
 r1
 !s85 0
 31
-R11
-R12
-R13
-!i113 0
 R14
-R2
+R15
+R16
+!i113 0
+R17
+R3
+n@b@n@n_@m@l@p
+vBNN_Neuron
+R6
+R5
+!i10b 1
+!s100 4dG81lN2:QYc6@C[40MoG3
+IF0NS]8Zl3mQ?z7mV`3gH83
+R8
+Z18 !s105 BNN_Neuron_sv_unit
+S1
+R0
+Z19 w1680079597
+Z20 8BNN_Neuron.sv
+Z21 FBNN_Neuron.sv
+L0 17
+R13
+r1
+!s85 0
+31
+R14
+R15
+R16
+!i113 0
+R17
+R3
 n@b@n@n_@neuron
 XBNN_PKG
-R3
-R1
+R6
+R5
 !i10b 1
 !s100 @DTV@Q_@]2doN[N[2EROD2
 IV[OPBmeBS4@<F>J79]=>o2
 VV[OPBmeBS4@<F>J79]=>o2
 S1
 R0
-R7
-R8
-R9
-L0 1
 R10
+R11
+R12
+L0 1
+R13
 r1
 !s85 0
 31
-R11
-R12
-R13
-!i113 0
 R14
-R2
+R15
+R16
+!i113 0
+R17
+R3
 n@b@n@n_@p@k@g
 vBNN_WEIGHTS
-R3
-R4
-R1
+R6
+R7
+R5
 !i10b 1
 !s100 KL9lnOYdb4IOL7Uojb3De3
 IPofI65NAKJ4408T7AC40_3
-R5
-R6
-S1
-R0
-R7
 R8
 R9
-L0 30
+S1
+R0
 R10
+R11
+R12
+L0 30
+R13
 r1
 !s85 0
 31
-R11
-R12
-R13
-!i113 0
 R14
-R2
+R15
+R16
+!i113 0
+R17
+R3
 n@b@n@n_@w@e@i@g@h@t@s
 vdecoder
-R3
-R1
-!i10b 1
-!s100 VU:2oBoF?XZPUd5^J1z;60
-IUXDjEHKOnUHODe8fmBz5Z1
+R6
 R5
+!i10b 1
+!s100 F9zU:Q3FKUUjhgOZ0S:]J3
+I[oQUmm7<TLR@zI[L?Q<N81
+R8
 !s105 decoder_sv_unit
 S1
 R0
-w1680079543
+w1680233372
 8decoder.sv
 Fdecoder.sv
 L0 22
-R10
+R13
 r1
 !s85 0
 31
-R11
-R12
-R13
-!i113 0
 R14
-R2
-vdecoder_tb
+R15
+R16
+!i113 0
+R17
 R3
-R1
-!i10b 1
-!s100 JCR@BPMHU@>79UZ3b=]DS2
-IEzX231UXm6ebOkCQObD8P2
+vdecoder_tb
+R6
 R5
+!i10b 1
+!s100 FKZ1g]o<B=EXdo_DEWPkP2
+I2Y61RC]42cRH4M>FbN:3]0
+R8
 !s105 decoder_tb_sv_unit
 S1
 R0
-w1680079215
+w1680233523
 8decoder_tb.sv
 Fdecoder_tb.sv
 L0 3
-R10
+R13
 r1
 !s85 0
 31
-R11
-R12
-R13
-!i113 0
 R14
-R2
-vFA
+R15
+R16
+!i113 0
+R17
 R3
-R1
+vFA
+R6
+R5
 !i10b 1
 !s100 9X1AAMk7_GIH4S>SQX@3^1
 InY0z?X:gci;^J[0PKCl]a0
-R5
-R15
+R8
+R18
 S1
 R0
-R16
-R17
-R18
+R19
+R20
+R21
 L0 9
-R10
+R13
 r1
 !s85 0
 31
-R11
-R12
-R13
-!i113 0
 R14
-R2
+R15
+R16
+!i113 0
+R17
+R3
 n@f@a
 vHA
-R3
-R1
+R6
+R5
 !i10b 1
 !s100 DTM>4;A>[=CL5G>ihzo^]1
 IZLGE3kW?V8zdBLNgaATU>3
-R5
-R15
+R8
+R18
 S1
 R0
-R16
-R17
-R18
+R19
+R20
+R21
 L0 1
-R10
+R13
 r1
 !s85 0
 31
-R11
-R12
-R13
-!i113 0
 R14
-R2
+R15
+R16
+!i113 0
+R17
+R3
 n@h@a

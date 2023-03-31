@@ -31,7 +31,6 @@ module decoder(
     
     
     always @(cmd) begin
-        
         case(temp_addr) 
             32'd0: BRAM[3:0]   <= cmd[3:0];
             32'd1: BRAM[11:4]  <= cmd;
@@ -39,7 +38,7 @@ module decoder(
             32'd3: BRAM[27:20] <= cmd;
             32'd4: BRAM[35:28] <= cmd;
             default: temp_addr <= 0;
-            endcase
+        endcase
         $display("ITER %d: %b",temp_addr, cmd);
         temp_addr <= temp_addr + 1;
         
@@ -49,10 +48,10 @@ module decoder(
     
     always @(outs) begin
         BRAM[39:36] = outs; 
-        Results = {4'b0, BRAM[39:36]}; 
+        Results = BRAM[39:36]; 
     end
 
-    BNN_MLP bnn(outs);
+    BNN_MLP bnn(Results);
     BNN_INPUT inputs(BRAM[3:0]);
     BNN_WEIGHTS weights(BRAM[19:4]);
     BNN_BIAS bias(BRAM[35:20]);

@@ -11,7 +11,7 @@ module BNN_MLP(output logic [3:0] R);
 	BNN_Neuron neuron1 (Input, Weights[11:8], Bias[11:8], Result[1]);
 	BNN_Neuron neuron2 (Input, Weights[7:4], Bias[7:4], Result[2]);
 	BNN_Neuron neuron3 (Input, Weights[3:0], Bias[3:0], Result[3]);
-
+	// assign R = Result;
 	always @(Result) begin
 		R = Result;
 	end

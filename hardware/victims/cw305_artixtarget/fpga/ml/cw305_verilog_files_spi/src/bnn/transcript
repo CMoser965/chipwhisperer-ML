@@ -13,8 +13,10 @@
 # //  18 U.S.C. Section 1905.
 # //
 # do {.\decoder_tb.do}
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is mathm@SPECTREGOLEM.
+# ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim SE-64 vlog 10.7f Compiler 2020.03 Mar 24 2020
-# Start time: 03:46:01 on Mar 29,2023
+# Start time: 22:32:10 on Mar 30,2023
 # vlog -reportprogress 300 BNN_MLP.sv BNN_Neuron.sv decoder.sv decoder_tb.sv 
 # -- Compiling package BNN_PKG
 # -- Compiling module BNN_MLP
@@ -30,10 +32,10 @@
 # 
 # Top level modules:
 # 	decoder_tb
-# End time: 03:46:01 on Mar 29,2023, Elapsed time: 0:00:00
+# End time: 22:32:10 on Mar 30,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -voptargs="+acc" work.decoder_tb 
-# Start time: 03:46:01 on Mar 29,2023
+# Start time: 22:32:10 on Mar 30,2023
 # ** Note: (vsim-3812) Design is being optimized...
 # Loading sv_std.std
 # Loading work.decoder_tb(fast)
@@ -46,16 +48,26 @@
 # Loading work.BNN_INPUT(fast)
 # Loading work.BNN_WEIGHTS(fast)
 # Loading work.BNN_BIAS(fast)
+# ** Warning: (vsim-3839) Variable '/decoder_tb/dec/Results', driven via a port connection, is multiply driven. See decoder.sv(54).
+#    Time: 0 ps  Iteration: 0  Instance: /decoder_tb/dec File: decoder.sv Line: 51
 # .main_pane.list.interior.cs.body
 # .main_pane.wave.interior.cs.body.pw.wf
-# 1111
-# ITER 0: 00000111
-# BRAM: 1111000000000000000000000000000000000000
-# ITER 1: 00100111
-# BRAM: 1111000000000000000000000000000000000111
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: mathm  Hostname: SPECTREGOLEM  ProcessID: 28588
+#           Attempting to use alternate WLF file "./wlftsdheih".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftsdheih
+# 0000
+# ITER 0: 00001110
+# BRAM: 0000000000000000000000000000000000000000
+# ITER 1: 11011110
+# BRAM: 0000000000000000000000000000000000001110
 # ITER 2: 00000000
-# BRAM: 1111000000000000000000000000001001110111
-# ITER 3: 00100111
-# BRAM: 1111000000000000000000000000001001110111
+# BRAM: 0000000000000000000000000000110111101110
+# ITER 3: 11011110
+# BRAM: 0000000000000000000000000000110111101110
+# 0100
 # ITER 4: 00000000
-# BRAM: 1111000000000010011100000000001001110111
+# BRAM: 0000000000001101111000000000110111101110
+# End time: 23:07:56 on Mar 30,2023, Elapsed time: 0:35:46
+# Errors: 0, Warnings: 3
