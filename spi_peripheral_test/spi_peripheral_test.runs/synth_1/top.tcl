@@ -88,6 +88,9 @@ OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib -sv {
   C:/Users/mathm/chipwhisperer-ML/spi_peripheral_test/spi_peripheral_test.srcs/sources_1/new/spi_interface.sv
   C:/Users/mathm/chipwhisperer-ML/spi_peripheral_test/spi_peripheral_test.srcs/sources_1/new/top.sv
+  C:/Users/mathm/chipwhisperer-ML/spi_peripheral_test/spi_peripheral_test.srcs/sources_1/imports/bnn/BNN_Neuron.sv
+  C:/Users/mathm/chipwhisperer-ML/spi_peripheral_test/spi_peripheral_test.srcs/sources_1/imports/bnn/BNN_MLP.sv
+  C:/Users/mathm/chipwhisperer-ML/spi_peripheral_test/spi_peripheral_test.srcs/sources_1/imports/bnn/decoder.sv
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

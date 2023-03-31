@@ -103,22 +103,28 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/decoder.sv">
+      <File Path="$PSRCDIR/sources_1/imports/bnn/BNN_Neuron.sv">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../hardware/victims/cw305_artixtarget/fpga/ml/cw305_verilog_files_spi/src/bnn/BNN_Neuron.sv"/>
+          <Attr Name="ImportTime" Val="1680079597"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../hardware/victims/cw305_artixtarget/fpga/ml/cw305_verilog_files_spi/src/bnn/BNN_Neuron.sv">
+      <File Path="$PSRCDIR/sources_1/imports/bnn/BNN_MLP.sv">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../hardware/victims/cw305_artixtarget/fpga/ml/cw305_verilog_files_spi/src/bnn/BNN_MLP.sv"/>
+          <Attr Name="ImportTime" Val="1680209416"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../hardware/victims/cw305_artixtarget/fpga/ml/cw305_verilog_files_spi/src/bnn/BNN_MLP.sv">
+      <File Path="$PSRCDIR/sources_1/imports/bnn/decoder.sv">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../hardware/victims/cw305_artixtarget/fpga/ml/cw305_verilog_files_spi/src/bnn/decoder.sv"/>
+          <Attr Name="ImportTime" Val="1680233372"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>

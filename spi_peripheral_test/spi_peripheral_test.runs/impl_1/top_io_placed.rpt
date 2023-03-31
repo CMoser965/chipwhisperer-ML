@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date                      : Mon Mar 27 01:24:25 2023
+| Date                      : Fri Mar 31 02:19:51 2023
 | Host                      : SpectreGolem running 64-bit major release  (build 9200)
 | Command                   : report_io -file top_io_placed.rpt
 | Design                    : top
@@ -276,9 +276,9 @@ Table of Contents
 | R15        |             | High Range | IO_L9P_T1_DQS_14             | User IO     |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | R16        |             | High Range | IO_L9N_T1_DQS_D13_14         | User IO     |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | T1         |             | High Range | VCCO_34                      | VCCO        |             |      34 |            |      |                     |                      |    3.30 |            |           |          |      |                  |              |                   |              |
-| T2         | led1        | High Range | IO_L8N_T1_34                 | OUTPUT      | LVCMOS33    |      34 |          8 | SLOW |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
-| T3         | led2        | High Range | IO_L9N_T1_DQS_34             | OUTPUT      | LVCMOS33    |      34 |          8 | SLOW |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
-| T4         | led3        | High Range | IO_L9P_T1_DQS_34             | OUTPUT      | LVCMOS33    |      34 |          8 | SLOW |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
+| T2         | led1        | High Range | IO_L8N_T1_34                 | TRISTATE    | LVCMOS33    |      34 |          8 | SLOW |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
+| T3         | led2        | High Range | IO_L9N_T1_DQS_34             | TRISTATE    | LVCMOS33    |      34 |          8 | SLOW |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
+| T4         | led3        | High Range | IO_L9P_T1_DQS_34             | TRISTATE    | LVCMOS33    |      34 |          8 | SLOW |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | T5         |             | High Range | IO_L23N_T3_A02_D18_14        | User IO     |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | T6         |             |            | GND                          | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | T7         |             | High Range | IO_L21P_T3_DQS_14            | User IO     |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |

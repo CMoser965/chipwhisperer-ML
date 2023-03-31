@@ -13,7 +13,7 @@ module top (
 
 reg[7:0] command;
 reg[7:0] miso_r;
-reg[7:0] outputs;
+reg[7:0] outputs = 8'b0;
 
 SPI_Slave interfacer(
     .SCLK(clk),
@@ -24,17 +24,30 @@ SPI_Slave interfacer(
 
 decoder DUT(
     .cmd(command),
-    .outs(outputs)
+    .Results(outputs[3:0])
 );
 
 always @(posedge clk & ~CS) begin
     MISO <= miso_r[0];
-    miso_r <= miso_r >> 1;
+//    miso_r = miso_r >> 1;
 end
 
-always @(posedge CS) begin
-    miso_r <= outputs;
+//always @(posedge CS) begin
+//    miso_r = outputs;
+//end
+
+always @(*) begin
+
+    if(~CS & clk) begin
+        miso_r <= miso_r >>1;
+    end
+    else if (CS) begin
+      miso_r <= outputs;
+    end
+
 end
+
+
 
 
 

@@ -54,9 +54,9 @@
 # .main_pane.wave.interior.cs.body.pw.wf
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: mathm  Hostname: SPECTREGOLEM  ProcessID: 28588
-#           Attempting to use alternate WLF file "./wlftsdheih".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftsdheih
+#           Attempting to use alternate WLF file # End time: 01:13:43 on Mar 31,2023, Elapsed time: 2:43:44
+# Errors: 0, Warnings: 1
+        Using alternate file: ./wlftsdheih
 # 0000
 # ITER 0: 00001110
 # BRAM: 0000000000000000000000000000000000000000
