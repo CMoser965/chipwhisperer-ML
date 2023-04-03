@@ -50,8 +50,7 @@ BConv_Interface DUT(
 always #5 clk = ~clk;
 
 initial begin
-    // #1000 clk =1'b0;
-    // #2000 $finish();
+    #20000 $finish();
 end
 
 endmodule

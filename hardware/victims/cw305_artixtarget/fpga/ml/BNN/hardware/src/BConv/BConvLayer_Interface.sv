@@ -32,14 +32,14 @@ XNOR_POPCOUNT convolver(
 integer i = 0;
 
 always @(clk) begin
-    input_slice[8:6] = image_flat[i +: 3];
-    input_slice[5:3] = image_flat[i+INPUT_W +: 3];
-    input_slice[2:0] = image_flat[i+2*INPUT_W +: 3];
-    output_flat[i] = output_slice;
+    input_slice[8:6] <= image_flat[i +: 3];
+    input_slice[5:3] <= image_flat[i+INPUT_W +: 3];
+    input_slice[2:0] <= image_flat[i+2*INPUT_W +: 3];
+    output_flat[i-1] <= output_slice;
     $display("Image, flattened:\n%b\n", image_flat);
     $display("input slice: %b\n", input_slice);
     $display("kernel flattened: %b\n", kernel_flat);
-    i = i+1;
+    i <= i+1;
 end
 
 assign layer_o = output_flat;
