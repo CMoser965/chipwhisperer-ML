@@ -9,117 +9,152 @@ z2
 cModel Technology
 Z0 dC:/Users/mathm/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/src/BConv
 T_opt
-!s110 1680488944
-VMSemf3Cd0gR7MG8ACa@FY2
-04 8 4 work stimulus fast 0
-=1-d4548b51d9bb-642a39f0-ec-4854
-o-quiet -auto_acc_if_foreign -work work +acc
-Z1 tCvgOpt 0
+!s110 1680537408
+VNkd@efNf9maiAS;ckfVMf2
+Z1 04 8 4 work stimulus fast 0
+=1-d4548b51d9bb-642af740-b6-a3bc
+Z2 o-quiet -auto_acc_if_foreign -work work +acc
+Z3 tCvgOpt 0
 n@_opt
-OL;O;10.7f;67
+Z4 OL;O;10.7f;67
+R0
+T_opt1
+!s110 1680537593
+V@6Oi]XWWAZ6e=<4`O9@j@1
+R1
+=1-d4548b51d9bb-642af7f9-dd-2f48
+R2
+R3
+n@_opt1
+R4
+vBConv_Interface
+Z5 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+Z6 !s110 1680537592
+!i10b 1
+!s100 94DYcTXY1lNYAXPi:8=n]1
+I8[UC@FHCeBKzdMhO;h@5_3
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+!s105 BConvLayer_Interface_sv_unit
+S1
+R0
+w1680537317
+8BConvLayer_Interface.sv
+FBConvLayer_Interface.sv
+L0 1
+Z8 OL;L;10.7f;67
+r1
+!s85 0
+31
+Z9 !s108 1680537592.000000
+Z10 !s107 XNOR_POPCOUNT.sv|XNOR.sv|Compressor.sv|BConvLayer_Interface_tb.sv|BConvLayer_Interface.sv|
+Z11 !s90 -reportprogress|300|BConvLayer_Interface.sv|BConvLayer_Interface_tb.sv|Compressor.sv|XNOR.sv|XNOR_POPCOUNT.sv|
+!i113 0
+Z12 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+n@b@conv_@interface
 vcompressor
-Z2 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
-Z3 !s110 1680488943
+R5
+R6
 !i10b 1
 !s100 H461[?ElBLlVVgKZI9TFO1
 Ic9HG9DVkMWGEW`z94Y^K13
-Z4 VDg1SIo80bB@j0V0VzS_@n1
-Z5 !s105 Compressor_sv_unit
+R7
+Z13 !s105 Compressor_sv_unit
 S1
 R0
-Z6 w1680487957
-Z7 8Compressor.sv
-Z8 FCompressor.sv
+Z14 w1680487957
+Z15 8Compressor.sv
+Z16 FCompressor.sv
 L0 1
-Z9 OL;L;10.7f;67
+R8
 r1
 !s85 0
 31
-Z10 !s108 1680488943.000000
-Z11 !s107 XNOR_POPCOUNT.sv|XNOR.sv|Compressor.sv|XNOR_POPCOUNT_tb.sv|
-Z12 !s90 XNOR_POPCOUNT_tb.sv|Compressor.sv|XNOR.sv|XNOR_POPCOUNT.sv|
+R9
+R10
+R11
 !i113 0
-Z13 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R1
-vfull_adder
-R2
+R12
 R3
+vfull_adder
+R5
+R6
 !i10b 1
 !s100 ND0]=zl:_jHb0i1M0A`Vf3
 I8GCRi^;JGdn?02_gi^<kE1
-R4
-R5
+R7
+R13
 S1
 R0
-R6
-R7
-R8
+R14
+R15
+R16
 L0 42
-R9
+R8
 r1
 !s85 0
 31
+R9
 R10
 R11
-R12
 !i113 0
-R13
-R1
-vripple_carry_adder
-R2
+R12
 R3
+vripple_carry_adder
+R5
+R6
 !i10b 1
 !s100 NMnNW_LJVPf7gQn98Ie332
 ImTh]]^KSM;iV:LlPTKYd[2
-R4
-R5
-S1
-R0
-R6
 R7
-R8
-L0 27
-R9
-r1
-!s85 0
-31
-R10
-R11
-R12
-!i113 0
 R13
-R1
-vstimulus
-R2
-R3
-!i10b 1
-!s100 4^l90XHX?@`NS9;]_BZf[0
-IK1B[R049?S_4[R]]_m_oQ2
-R4
-!s105 XNOR_POPCOUNT_tb_sv_unit
 S1
 R0
-w1680488846
-8XNOR_POPCOUNT_tb.sv
-FXNOR_POPCOUNT_tb.sv
-L0 1
-R9
+R14
+R15
+R16
+L0 27
+R8
 r1
 !s85 0
 31
+R9
 R10
 R11
-R12
 !i113 0
-R13
-R1
-vXNOR
-R2
+R12
 R3
+vstimulus
+R5
+R6
+!i10b 1
+!s100 GR4SdW^0Ah:]?^DD]DUUW1
+I`4?L==V:gN;F9970ekG443
+R7
+!s105 BConvLayer_Interface_tb_sv_unit
+S1
+R0
+w1680537580
+8BConvLayer_Interface_tb.sv
+FBConvLayer_Interface_tb.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+vXNOR
+R5
+R6
 !i10b 1
 !s100 T2e5E0;XQS>Sm?7KWYzgb3
 I<GPN`X=I2WKMKVPI<T2zZ2
-R4
+R7
 !s105 XNOR_sv_unit
 S1
 R0
@@ -127,24 +162,24 @@ w1680473997
 8XNOR.sv
 FXNOR.sv
 L0 1
-R9
+R8
 r1
 !s85 0
 31
+R9
 R10
 R11
-R12
 !i113 0
-R13
-R1
+R12
+R3
 n@x@n@o@r
 vXNOR_POPCOUNT
-R2
-R3
+R5
+R6
 !i10b 1
 !s100 L]OXeFSdH`XFHK[N22_Td1
 IbVj_2=Z`6GPNOJ8fKSPL70
-R4
+R7
 !s105 XNOR_POPCOUNT_sv_unit
 S1
 R0
@@ -152,14 +187,14 @@ w1680488915
 8XNOR_POPCOUNT.sv
 FXNOR_POPCOUNT.sv
 L0 1
-R9
+R8
 r1
 !s85 0
 31
+R9
 R10
 R11
-R12
 !i113 0
-R13
-R1
+R12
+R3
 n@x@n@o@r_@p@o@p@c@o@u@n@t

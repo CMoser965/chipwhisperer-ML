@@ -47,9 +47,11 @@ BConv_Interface DUT(
     .layer_o(output_image)
 );
 
+always #5 clk = ~clk;
+
 initial begin
-    #100 clk =1'b0;
-    #200 $finish();
+    // #1000 clk =1'b0;
+    // #2000 $finish();
 end
 
 endmodule
