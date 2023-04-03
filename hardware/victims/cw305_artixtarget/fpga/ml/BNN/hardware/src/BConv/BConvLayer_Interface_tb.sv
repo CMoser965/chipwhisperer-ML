@@ -38,7 +38,7 @@ initial begin
     kernel[2] = 3'b101;
 end
 
-logic [25:0][25:0][3:0] output_image;
+logic [25:0][25:0] output_image;
 
 BConv_Interface DUT(
     .layer_i(mem_image),
@@ -50,7 +50,7 @@ BConv_Interface DUT(
 always #5 clk = ~clk;
 
 initial begin
-    #20000 $finish();
+    #20000 $display(output_image);
 end
 
 endmodule

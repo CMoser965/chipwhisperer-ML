@@ -27,7 +27,7 @@ if [file exists work] {
 vlib work
 
 # compile source files
-vlog BConvLayer_Interface*.sv Compressor.sv XNOR.sv XNOR_POPCOUNT.sv 
+vlog BConvLayer_Interface*.sv Compressor.sv XNOR.sv XNOR_POPCOUNT.sv Accumulator.sv 
 
 # start and run simulation
 vsim -voptargs=+acc work.stimulus 

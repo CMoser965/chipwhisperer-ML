@@ -9,7 +9,7 @@ module BConv_Interface #(
     input  [INPUT_H-1:0][INPUT_W-1:0] layer_i,
     input  [K_H-1:0][K_W-1:0] kernel,
     input  clk,
-    output [OUTPUT_H-1:0][OUTPUT_W-1:0][3:0] layer_o,
+    output [OUTPUT_H-1:0][OUTPUT_W-1:0] layer_o,
     output done
 );
 
@@ -18,7 +18,7 @@ logic [3:0] output_slice;
 
 wire [K_W*K_H-1:0] kernel_flat;
 wire [INPUT_H*INPUT_W-1:0] image_flat;
-logic [OUTPUT_H*OUTPUT_W-1:0][3:0] output_flat;
+logic [OUTPUT_H*OUTPUT_W-1:0] output_flat;
 
 assign kernel_flat = kernel;
 assign image_flat = layer_i;
@@ -35,10 +35,7 @@ always @(clk) begin
     input_slice[8:6] <= image_flat[i +: 3];
     input_slice[5:3] <= image_flat[i+INPUT_W +: 3];
     input_slice[2:0] <= image_flat[i+2*INPUT_W +: 3];
-    output_flat[i-1] <= output_slice;
-    $display("Image, flattened:\n%b\n", image_flat);
-    $display("input slice: %b\n", input_slice);
-    $display("kernel flattened: %b\n", kernel_flat);
+    output_flat[i-1] <= (2*output_slice > 8) ? 1'b1 : 1'b0;
     i <= i+1;
 end
 
