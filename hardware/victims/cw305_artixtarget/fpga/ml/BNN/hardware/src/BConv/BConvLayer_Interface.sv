@@ -6,35 +6,42 @@ module BConv_Interface #(
     parameter OUTPUT_H = 26,
     parameter OUTPUT_W = 26
 ) (
-    input  logic [INPUT_H-1:0][INPUT_W-1:0] layer_i,
-    input  logic [K_H-1:0][K_W-1:0] kernel,
-    input  logic clk,
-    output logic  [OUTPUT_H-1:0][OUTPUT_W-1:0][3:0] layer_o
+    input  [INPUT_H-1:0][INPUT_W-1:0] layer_i,
+    input  [K_H-1:0][K_W-1:0] kernel,
+    input  clk,
+    output [OUTPUT_H-1:0][OUTPUT_W-1:0][3:0] layer_o,
+    output done
 );
 
 logic [8:0] input_slice;
+logic [3:0] output_slice;
 
 wire [K_W*K_H-1:0] kernel_flat;
 wire [INPUT_H*INPUT_W-1:0] image_flat;
+logic [OUTPUT_H*OUTPUT_W-1:0][3:0] output_flat;
 
 assign kernel_flat = kernel;
 assign image_flat = layer_i;
 
-
 XNOR_POPCOUNT convolver(
     .input_feat(input_slice),
     .weight_feat(kernel_flat),
-    .convolution_o(layer_o)
+    .convolution_o(output_slice)
 );
 
-integer i;
+integer i = 0;
 
 always @(clk) begin
-    for(i = 0; i < INPUT_H + K_H - 1; i = i + 1) begin
-        input_slice[8:6] = image_flat[i +: 3];
-        input_slice[5:3] = image_flat[i*INPUT_W +: 3];
-        input_slice[2:0] = image_flat[i*2*INPUT_W +: 3];
-    end
+    input_slice[8:6] = image_flat[i +: 3];
+    input_slice[5:3] = image_flat[i+INPUT_W +: 3];
+    input_slice[2:0] = image_flat[i+2*INPUT_W +: 3];
+    output_flat[i] = output_slice;
+    $display("Image, flattened:\n%b\n", image_flat);
+    $display("input slice: %b\n", input_slice);
+    $display("kernel flattened: %b\n", kernel_flat);
+    i = i+1;
 end
+
+assign layer_o = output_flat;
 
 endmodule
