@@ -9,47 +9,32 @@ module BConv_Interface #(
     input  logic [INPUT_H-1:0][INPUT_W-1:0] layer_i,
     input  logic [K_H-1:0][K_W-1:0] kernel,
     input  logic clk,
-    output logic  [OUTPUT_H-1:0][OUTPUT_W-1:0] layer_o
+    output logic  [OUTPUT_H-1:0][OUTPUT_W-1:0] layer_o [3:0]
 );
 
 logic [8:0] input_slice;
-logic [K_W*K_H-1:0] kernel_vect;
+
+wire [K_W*K_H-1:0] kernel_flat;
+wire [INPUT_H*INPUT_W-1:0] image_flat;
+
+assign kernel_flat = kernel;
+assign image_flat = layer_i;
 
 
-shift_reg #(.SIZE(INPUT_H)) layer_i_col[INPUT_W-1:0] (
-    .d(layer_i[INPUT_W-1:0][INPUT_H-1:0]),
-    .clk(clk),
-    .en(1'b1),
-    .dir(1'b1),
-    .rstn(1'b1),
-    .out(input_slice)
+XNOR_POPCOUNT convolver(
+    .input_feat(input_slice),
+    .weight_feat(kernel_flat),
+    .convolution_o(layer_o)
 );
 
+integer i;
 
-
-endmodule
-
-module shift_reg #(parameter SIZE=8) (
-    input d,
-    input clk,
-    input en,
-    input dir,
-    input rstn,
-    output logic [SIZE-1:0] out
-);
-
-always @(posedge clk) begin
-    if (!rstn)
-    out <= 0;
-    else begin
-        if (en)
-            case(dir)
-                0: out <= {out[SIZE-2:0], d};
-                1: out <= {d, out[SIZE-1:1]};
-            endcase
-        else 
-            out <= out;
-        end
+always @(*) begin
+    for(i = 0; i < INPUT_H + K_H - 1; i = i + 1) begin
+        input_slice[6:8] = image_flat[i +: 3];
+        input_slice[3:5] = image_flat[i*INPUT_W +: 3];
+        input_slice[0:2] = image_flat[i*2*INPUT_W +: 3];
+    end
 end
 
 endmodule
