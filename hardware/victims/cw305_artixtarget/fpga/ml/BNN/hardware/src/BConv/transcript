@@ -15,7 +15,7 @@
 # ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is mathm@SPECTREGOLEM.
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim SE-64 vlog 10.7f Compiler 2020.03 Mar 24 2020
-# Start time: 14:58:31 on Apr 03,2023
+# Start time: 01:04:54 on Apr 04,2023
 # vlog -reportprogress 300 BConvLayer_Interface.sv BConvLayer_Interface_tb.sv Compressor.sv XNOR.sv XNOR_POPCOUNT.sv Accumulator.sv 
 # -- Compiling module BConv_Interface
 # -- Compiling module stimulus
@@ -29,10 +29,10 @@
 # Top level modules:
 # 	stimulus
 # 	accumulator
-# End time: 14:58:31 on Apr 03,2023, Elapsed time: 0:00:00
+# End time: 01:04:54 on Apr 04,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -voptargs="+acc" work.stimulus 
-# Start time: 14:58:31 on Apr 03,2023
+# Start time: 01:04:54 on Apr 04,2023
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: BConvLayer_Interface_tb.sv(43): (vopt-2685) [TFMPC] - Too few port connections for 'DUT'.  Expected 5, found 4.
 # ** Warning: BConvLayer_Interface_tb.sv(43): (vopt-2718) [TFMPC] - Missing connection for port 'done'.
@@ -50,8 +50,8 @@
 #    Time: 0 ns  Iteration: 0  Instance: /stimulus/DUT/convolver/popcounted_add File: XNOR_POPCOUNT.sv Line: 35
 # .main_pane.list.interior.cs.body
 # .main_pane.wave.interior.cs.body.pw.wf
-run 3000
-run 3000
-q
-# End time: 14:59:25 on Apr 03,2023, Elapsed time: 0:00:54
-# Errors: 0, Warnings: 4
+run 19999
+# 209019021254713277309774950459803289792948556058532947679292396826296335629506143812881570509178974279840110494938620635391053845492355182295156112140491837261328048353530748613344182884070186506561170090
+# Causality operation skipped due to absence of debug database file
+# End time: 01:07:16 on Apr 04,2023, Elapsed time: 0:02:22
+# Errors: 0, Warnings: 5
