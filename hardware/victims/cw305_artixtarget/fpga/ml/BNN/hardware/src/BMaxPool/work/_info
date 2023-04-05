@@ -1,0 +1,68 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/mathm/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/src/BMaxPool
+T_opt
+!s110 1680676789
+Vkc9EEHl@zPijUV0zVWg:61
+04 8 4 work stimulus fast 0
+=1-d4548b51d9bb-642d17b4-382-6a40
+o-quiet -auto_acc_if_foreign -work work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.7f;67
+vBMaxPool
+Z2 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+Z3 !s110 1680676788
+!i10b 1
+!s100 CEmOiS?=lPeb9WbBchI>M1
+IkTRb4ZQNGZ0=DPf;WPTiD2
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+!s105 BMaxPool_Layer_sv_unit
+S1
+R0
+w1680676777
+8BMaxPool_Layer.sv
+FBMaxPool_Layer.sv
+L0 1
+Z5 OL;L;10.7f;67
+r1
+!s85 0
+31
+Z6 !s108 1680676787.000000
+Z7 !s107 BMaxPool_Layer_tb.sv|BMaxPool_Layer.sv|
+Z8 !s90 -reportprogress|300|BMaxPool_Layer.sv|BMaxPool_Layer_tb.sv|
+!i113 0
+Z9 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+n@b@max@pool
+vstimulus
+R2
+R3
+!i10b 1
+!s100 zS2YVaaUi4zC=E[_mI4>Y0
+I?XECMZIQf1ma0g[MC9niM2
+R4
+!s105 BMaxPool_Layer_tb_sv_unit
+S1
+R0
+w1680675101
+8BMaxPool_Layer_tb.sv
+FBMaxPool_Layer_tb.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R1
