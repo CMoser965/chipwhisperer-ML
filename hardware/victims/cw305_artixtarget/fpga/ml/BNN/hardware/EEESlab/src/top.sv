@@ -1,6 +1,6 @@
 module top (
     input logic [0:0][7:0][7:0] layer_i,
-    output logic [9:0][6:0] layer_o
+    output logic [9:0][4:0] layer_o
 );
 
 logic [31:0][0:0][8:0] weights_0;

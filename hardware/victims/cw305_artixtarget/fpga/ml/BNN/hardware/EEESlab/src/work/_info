@@ -9,17 +9,17 @@ z2
 cModel Technology
 Z0 dD:/Projects/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/EEESlab/src
 T_opt
-!s110 1681411188
-VK>ie_kKjAoE9B6NTSocY70
+Z1 !s110 1681422367
+VOUjUCg73ISBCecHP2V7nk1
 04 8 4 work stimulus fast 0
-=1-d45d6450d47a-64384c73-36a-8d38
+=1-d45d6450d47a-6438781f-1f1-c4c
 o-quiet -auto_acc_if_foreign -work work +acc
-Z1 tCvgOpt 0
+Z2 tCvgOpt 0
 n@_opt
 OL;O;10.7f;67
 vbconv_layer
-Z2 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
-Z3 !s110 1681411187
+Z3 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+R1
 !i10b 1
 !s100 j@0na6?1XRU7ion1nJUL63
 I;n3RCbW^jjC=`>[0V6THZ2
@@ -35,15 +35,15 @@ Z6 OL;L;10.7f;67
 r1
 !s85 0
 31
-Z7 !s108 1681411187.000000
+Z7 !s108 1681422367.000000
 Z8 !s107 data.sv|popcnt.sv|blast_layer.sv|blin_layer.sv|bview_layer.sv|bconv_layer.sv|bnn.sv|top.sv|bench.sv|
 Z9 !s90 -reportprogress|300|bench.sv|top.sv|bnn.sv|bconv_layer.sv|bview_layer.sv|blin_layer.sv|blast_layer.sv|popcnt.sv|data.sv|
 !i113 0
 Z10 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R1
-vblast_layer
 R2
+vblast_layer
 R3
+R1
 !i10b 1
 !s100 ]loXo[Cd?cEb`oAl6Wfkl0
 IgX2jARZQdE`cOLT6@eV9X1
@@ -64,10 +64,10 @@ R8
 R9
 !i113 0
 R10
-R1
-vblin_layer
 R2
+vblin_layer
 R3
+R1
 !i10b 1
 !s100 ;=[b^Y3C:2^W]<f@ZYQi>1
 II5B;UHaAVY:UdbcN1h?R73
@@ -88,18 +88,18 @@ R8
 R9
 !i113 0
 R10
-R1
-vbnn
 R2
+vbnn
 R3
+R1
 !i10b 1
-!s100 WO2O1KQ26Z^_ib;2azFfH3
-IY2`CLDB_Q42KSP@FX6^gC1
+!s100 :>1@RgIKNzRRP855U9Q[_1
+IN==2e7TOY@kmJgW;fXIHc1
 R4
 !s105 bnn_sv_unit
 S1
 R0
-w1681411173
+w1681421856
 8bnn.sv
 Fbnn.sv
 L0 1
@@ -112,10 +112,10 @@ R8
 R9
 !i113 0
 R10
-R1
-vbview_layer
 R2
+vbview_layer
 R3
+R1
 !i10b 1
 !s100 TJa6bROLT>hMclB866VRL3
 IVk5^0`J8`_IliFXl2@Adj0
@@ -136,10 +136,10 @@ R8
 R9
 !i113 0
 R10
-R1
-vparameters
 R2
+vparameters
 R3
+R1
 !i10b 1
 !s100 L_1D8C05]?@;KZi@Z7I932
 I@`lKAQh`deW5G=>e]9Ae_0
@@ -160,10 +160,10 @@ R8
 R9
 !i113 0
 R10
-R1
-vpopcnt_hw
 R2
+vpopcnt_hw
 R3
+R1
 !i10b 1
 !s100 NW[bZiQRbIXD^`]kk27Jj0
 IPPFI<dh<c1JK0IaA@EJGz2
@@ -184,18 +184,18 @@ R8
 R9
 !i113 0
 R10
-R1
-vstimulus
 R2
+vstimulus
 R3
+R1
 !i10b 1
-!s100 XNC667KBUOIk@7[_:Oe9D3
-I0`A6XKLg1FeYKEbH>_JkW2
+!s100 V5PiX22jVfCX8QWa;aT=D1
+IB3SEI3jS]2CW?PbFz1dgH1
 R4
 !s105 bench_sv_unit
 S1
 R0
-w1681406585
+w1681422349
 8bench.sv
 Fbench.sv
 L0 1
@@ -208,18 +208,18 @@ R8
 R9
 !i113 0
 R10
-R1
-vtop
 R2
+vtop
 R3
+R1
 !i10b 1
-!s100 `HEKdh6h>WRc[WbO?`6^b0
-IVikhed_OK>Fd9hZXmXSL62
+!s100 ]:3R_S_]gJAVUfa6GiCj:3
+I[Y_01__`bAL8J<JDB`jT^0
 R4
 !s105 top_sv_unit
 S1
 R0
-w1681410776
+w1681418839
 8top.sv
 Ftop.sv
 L0 1
@@ -232,4 +232,4 @@ R8
 R9
 !i113 0
 R10
-R1
+R2
