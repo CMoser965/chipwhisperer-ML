@@ -2,14 +2,14 @@ module bnn (
     input logic [0:0][7:0][7:0] layer_i,
 
 	input logic [31:0][0:0][8:0] weights_i_0,
-	input logic [31:0][3:0] threshold_i_0,
+	input logic [31:0][2:0] threshold_i_0,
 	input logic [31:0][1:0] sign_i_0,
-	input logic [63:0][31:0][8:0] weights_i_1,
-	input logic [62:0][8:0] threshold_i_1,
+	input logic [287:0][63:0] weights_i_1,
+	input logic [62:0][9:0] threshold_i_1,
 	input logic [63:0][1:0] sign_i_1,
-	input logic [575:0][63:0][8:0] weights_i_2,
-	input logic [575:0][9:0] threshold_i_2,
-	input logic [575:0][1:0] sign_i_2,
+	input logic [63:0][9:0] weights_i_2,
+	input logic [9:0][4:0] threshold_i_2,
+	input logic [9:0][1:0] sign_i_2,
 
 	output logic [9:0][6:0] layer_o
 );
@@ -24,6 +24,6 @@ bview_layer #( .ISIZE_W (3), .ISIZE_H (3), .ISIZE_FEAT (64), .OSIZE_FEAT (288)) 
 
 blin_layer #( .ISIZE_FEAT (288), .OSIZE_FEAT (64), .N_BITCONV (10)) binLinLayer_2 (.layer_i (olayer_1), .weights_i (weights_i_1), .threshold_i (threshold_i_1), .sign_i (sign_i_1), .layer_o (olayer_2));
 
-blast_layer #( .ISIZE_FEAT (64), .OSIZE_FEAT (10), .N_BITCONV (5)) binLastLayer3 (.layer_i (olayer_3), .weights_i (weights_i_2), .layer_o (layer_o));
+blast_layer #( .ISIZE_FEAT (64), .OSIZE_FEAT (10), .N_BITCONV (5)) binLastLayer3 (.layer_i (olayer_2), .weights_i (weights_i_2), .layer_o (layer_o));
 
 endmodule

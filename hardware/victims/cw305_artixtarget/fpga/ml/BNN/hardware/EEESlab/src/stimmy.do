@@ -27,7 +27,7 @@ if [file exists work] {
 vlib work
 
 # compile source files
-vlog bench.sv top.sv bnn.sv bconv_layer.sv bview_layer.sv blin_layer.sv blast_layer.sv popcnt.sv
+vlog bench.sv top.sv bnn.sv bconv_layer.sv bview_layer.sv blin_layer.sv blast_layer.sv popcnt.sv data.sv
 
 # start and run simulation
 vsim -voptargs=+acc work.stimulus 

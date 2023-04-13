@@ -9,7 +9,7 @@ logic [31:0][1:0] sign_0;
 logic [287:0][63:0] weights_1;
 logic [63:0][9:0] threshold_1;
 logic [63:0][1:0] sign_1;
-logic [0:0][63:0][9:0] weights_2;
+logic [63:0][9:0] weights_2;
 logic [9:0][4:0] threshold_2;
 logic [9:0][1:0] sign_2;
 
@@ -30,13 +30,13 @@ bnn bnn_i
 
 parameters parameters_i
 (
-    .weight_o_0	(weights_0),
+    .weights_o_0	(weights_0),
     .threshold_o_0	(threshold_0),
     .sign_o_0		(sign_0),
-    .weight_o_1	(weights_1),
+    .weights_o_1	(weights_1),
     .threshold_o_1	(threshold_1),
     .sign_o_1		(sign_1),
-    .weight_o_2	(weights_2),
+    .weights_o_2	(weights_2),
     .threshold_o_2	(threshold_2),
     .sign_o_2		(sign_2)
 );	

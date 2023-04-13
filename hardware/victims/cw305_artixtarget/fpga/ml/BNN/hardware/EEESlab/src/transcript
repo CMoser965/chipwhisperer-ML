@@ -1,0 +1,300 @@
+# //  ModelSim SE-64 10.7f Mar 24 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do stimmy.do
+# Model Technology ModelSim SE-64 vlog 10.7f Compiler 2020.03 Mar 24 2020
+# Start time: 13:39:47 on Apr 13,2023
+# vlog -reportprogress 300 bench.sv top.sv bnn.sv bconv_layer.sv bview_layer.sv blin_layer.sv blast_layer.sv popcnt.sv data.sv 
+# -- Compiling module stimulus
+# -- Compiling module top
+# ** Warning: top.sv(2): (vlog-13314) Defaulting port 'layer_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Compiling module bnn
+# ** Warning: bnn.sv(2): (vlog-13314) Defaulting port 'layer_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: bnn.sv(4): (vlog-13314) Defaulting port 'weights_i_0' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: bnn.sv(5): (vlog-13314) Defaulting port 'threshold_i_0' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: bnn.sv(6): (vlog-13314) Defaulting port 'sign_i_0' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: bnn.sv(7): (vlog-13314) Defaulting port 'weights_i_1' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: bnn.sv(8): (vlog-13314) Defaulting port 'threshold_i_1' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: bnn.sv(9): (vlog-13314) Defaulting port 'sign_i_1' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: bnn.sv(10): (vlog-13314) Defaulting port 'weights_i_2' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: bnn.sv(11): (vlog-13314) Defaulting port 'threshold_i_2' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: bnn.sv(12): (vlog-13314) Defaulting port 'sign_i_2' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Compiling module bconv_layer
+# ** Warning: bconv_layer.sv(35): (vlog-13314) Defaulting port 'layer_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: bconv_layer.sv(36): (vlog-13314) Defaulting port 'weights_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: bconv_layer.sv(37): (vlog-13314) Defaulting port 'threshold_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: bconv_layer.sv(38): (vlog-13314) Defaulting port 'sign_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Compiling module bview_layer
+# ** Warning: bview_layer.sv(15): (vlog-13314) Defaulting port 'layer_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Compiling module blin_layer
+# ** Warning: blin_layer.sv(16): (vlog-13314) Defaulting port 'weights_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: blin_layer.sv(17): (vlog-13314) Defaulting port 'threshold_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: blin_layer.sv(18): (vlog-13314) Defaulting port 'sign_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Compiling module blast_layer
+# ** Warning: blast_layer.sv(16): (vlog-13314) Defaulting port 'weights_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Compiling module popcnt_hw
+# -- Compiling module parameters
+# 
+# Top level modules:
+# 	stimulus
+# End time: 13:39:47 on Apr 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 20
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 13:39:47 on Apr 13,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: bconv_layer.sv(35): (vopt-13314) Defaulting port 'layer_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: bconv_layer.sv(36): (vopt-13314) Defaulting port 'weights_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: bconv_layer.sv(37): (vopt-13314) Defaulting port 'threshold_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: bconv_layer.sv(38): (vopt-13314) Defaulting port 'sign_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: bview_layer.sv(15): (vopt-13314) Defaulting port 'layer_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) MSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: bview_layer.sv(31): (vopt-2697) LSB of part-select into 'layer_o' is out of bounds.
+# ** Warning: blin_layer.sv(16): (vopt-13314) Defaulting port 'weights_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: blin_layer.sv(17): (vopt-13314) Defaulting port 'threshold_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: blin_layer.sv(18): (vopt-13314) Defaulting port 'sign_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: blast_layer.sv(16): (vopt-13314) Defaulting port 'weights_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: bnn.sv(2): (vopt-13314) Defaulting port 'layer_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: bnn.sv(4): (vopt-13314) Defaulting port 'weights_i_0' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: bnn.sv(5): (vopt-13314) Defaulting port 'threshold_i_0' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: bnn.sv(6): (vopt-13314) Defaulting port 'sign_i_0' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: bnn.sv(7): (vopt-13314) Defaulting port 'weights_i_1' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: bnn.sv(8): (vopt-13314) Defaulting port 'threshold_i_1' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: bnn.sv(9): (vopt-13314) Defaulting port 'sign_i_1' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: bnn.sv(10): (vopt-13314) Defaulting port 'weights_i_2' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: bnn.sv(11): (vopt-13314) Defaulting port 'threshold_i_2' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: bnn.sv(12): (vopt-13314) Defaulting port 'sign_i_2' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: top.sv(2): (vopt-13314) Defaulting port 'layer_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.top(fast)
+# Loading work.bnn(fast)
+# Loading work.bconv_layer(fast)
+# Loading work.popcnt_hw(fast)
+# Loading work.bview_layer(fast)
+# Loading work.blin_layer(fast)
+# Loading work.popcnt_hw(fast__1)
+# Loading work.blast_layer(fast)
+# Loading work.popcnt_hw(fast__2)
+# Loading work.parameters(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (630) does not match connection size (640) for port 'threshold_i_1'. The port definition is at: bnn.sv(8).
+#    Time: 0 ns  Iteration: 0  Instance: /stimulus/bnn_test/bnn_i File: top.sv Line: 16
+# ** Warning: (vsim-3015) [PCDPC] - Port size (576) does not match connection size (288) for port 'layer_i'. The port definition is at: bview_layer.sv(15).
+#    Time: 0 ns  Iteration: 0  Instance: /stimulus/bnn_test/bnn_i/binViewLayer_1 File: bnn.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (288) does not match connection size (18496) for port 'layer_o'. The port definition is at: bview_layer.sv(16).
+#    Time: 0 ns  Iteration: 0  Instance: /stimulus/bnn_test/bnn_i/binViewLayer_1 File: bnn.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (288) does not match connection size (18496) for port 'layer_i'. The port definition is at: blin_layer.sv(15).
+#    Time: 0 ns  Iteration: 0  Instance: /stimulus/bnn_test/bnn_i/binLinLayer_2 File: bnn.sv Line: 25
+# ** Warning: (vsim-3015) [PCDPC] - Port size (640) does not match connection size (630) for port 'threshold_i'. The port definition is at: blin_layer.sv(17).
+#    Time: 0 ns  Iteration: 0  Instance: /stimulus/bnn_test/bnn_i/binLinLayer_2 File: bnn.sv Line: 25
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (576) for port 'layer_o'. The port definition is at: blin_layer.sv(19).
+#    Time: 0 ns  Iteration: 0  Instance: /stimulus/bnn_test/bnn_i/binLinLayer_2 File: bnn.sv Line: 25
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (576) for port 'layer_i'. The port definition is at: blast_layer.sv(15).
+#    Time: 0 ns  Iteration: 0  Instance: /stimulus/bnn_test/bnn_i/binLastLayer3 File: bnn.sv Line: 27
+# ** Warning: (vsim-3015) [PCDPC] - Port size (50) does not match connection size (70) for port 'layer_o'. The port definition is at: blast_layer.sv(17).
+#    Time: 0 ns  Iteration: 0  Instance: /stimulus/bnn_test/bnn_i/binLastLayer3 File: bnn.sv Line: 27
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+run 1500
+q
+# End time: 13:44:48 on Apr 13,2023, Elapsed time: 0:05:01
+# Errors: 0, Warnings: 220
