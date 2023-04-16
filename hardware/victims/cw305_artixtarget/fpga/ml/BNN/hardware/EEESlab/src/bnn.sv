@@ -14,9 +14,9 @@ module bnn (
 	output logic [9:0][4:0] layer_o
 );
 
-logic [31:0][2:0][2:0] olayer_0;
-logic [287:0] olayer_1;
-logic [63:0] olayer_2;
+reg [31:0][2:0][2:0] olayer_0;
+reg [287:0] olayer_1;
+reg [63:0] olayer_2;
 
 bconv_layer #( .ISIZE_W (8), .ISIZE_H (8), .ISIZE_FEAT (1), .OSIZE_W (3), .OSIZE_H (3), .OSIZE_FEAT (32), .CONV_KW  (3), .CONV_SW (1), .CONV_PW (1), .CONV_KH (3), .CONV_SH (1), .CONV_PH (1), .POOL_SW (2), .POOL_PW (2), .POOL_SH (2), .POOL_PH (2), .N_RECFIELDS (64), .LENGHT_RECFIELDS (9), .N_BITCONV (3)) binConvLayer_0 (.layer_i (layer_i), .weights_i (weights_i_0), .threshold_i (threshold_i_0), .sign_i (sign_i_0), .layer_o (olayer_0));
 

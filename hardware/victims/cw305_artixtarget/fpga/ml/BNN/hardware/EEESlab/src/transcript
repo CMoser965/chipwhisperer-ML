@@ -11,9 +11,12 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-# do stimmy.do
+# do {.\stimmy.do}
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is mathm@SPECTREGOLEM.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is mathm@SPECTREGOLEM.
+# ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim SE-64 vlog 10.7f Compiler 2020.03 Mar 24 2020
-# Start time: 16:46:07 on Apr 13,2023
+# Start time: 02:03:16 on Apr 16,2023
 # vlog -reportprogress 300 bench.sv top.sv bnn.sv bconv_layer.sv bview_layer.sv blin_layer.sv blast_layer.sv popcnt.sv data.sv 
 # -- Compiling module stimulus
 # -- Compiling module top
@@ -47,10 +50,10 @@
 # 
 # Top level modules:
 # 	stimulus
-# End time: 16:46:07 on Apr 13,2023, Elapsed time: 0:00:00
+# End time: 02:03:16 on Apr 16,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 20
 # vsim -voptargs="+acc" work.stimulus 
-# Start time: 16:46:07 on Apr 13,2023
+# Start time: 02:03:16 on Apr 16,2023
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: bconv_layer.sv(35): (vopt-13314) Defaulting port 'layer_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
 # ** Warning: bconv_layer.sv(36): (vopt-13314) Defaulting port 'weights_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
@@ -86,9 +89,12 @@
 # Loading work.parameters(fast)
 # .main_pane.list.interior.cs.body
 # .main_pane.wave.interior.cs.body.pw.wf
-# INPUT:
-# 
-run 100
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: mathm  Hostname: SPECTREGOLEM  ProcessID: 17192
+#           Attempting to use alternate WLF file "./wlftbe33sn".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftbe33sn
+run 5
 # OUTPUT[9]:	  3	 3 (BIN: 00000011, HEX: 0x03 )
 # OUTPUT[8]:	  7	 7 (BIN: 00000111, HEX: 0x07 )
 # OUTPUT[7]:	  2	 2 (BIN: 00000010, HEX: 0x02 )
@@ -99,6 +105,40 @@ run 100
 # OUTPUT[2]:	 -1	31 (BIN: 00011111, HEX: 0x1f )
 # OUTPUT[1]:	  1	 1 (BIN: 00000001, HEX: 0x01 )
 # OUTPUT[0]:	  2	 2 (BIN: 00000010, HEX: 0x02 )
+run 5
+run 5
+run 5
+run 5
+run 10
+run 10
+# OUTPUT[9]:	  3	 3 (BIN: 00000011, HEX: 0x03 )
+# OUTPUT[8]:	  7	 7 (BIN: 00000111, HEX: 0x07 )
+# OUTPUT[7]:	  2	 2 (BIN: 00000010, HEX: 0x02 )
+# OUTPUT[6]:	  2	 2 (BIN: 00000010, HEX: 0x02 )
+# OUTPUT[5]:	  1	 1 (BIN: 00000001, HEX: 0x01 )
+# OUTPUT[4]:	 -7	25 (BIN: 00011001, HEX: 0x19 )
+# OUTPUT[3]:	 -1	31 (BIN: 00011111, HEX: 0x1f )
+# OUTPUT[2]:	 -1	31 (BIN: 00011111, HEX: 0x1f )
+# OUTPUT[1]:	  1	 1 (BIN: 00000001, HEX: 0x01 )
+# OUTPUT[0]:	  2	 2 (BIN: 00000010, HEX: 0x02 )
+run 10
+run 10
+run 5
+run 5
+run 5
+run 5
+run 10
+# OUTPUT[9]:	  2	 2 (BIN: 00000010, HEX: 0x02 )
+# OUTPUT[8]:	  8	 8 (BIN: 00001000, HEX: 0x08 )
+# OUTPUT[7]:	  3	 3 (BIN: 00000011, HEX: 0x03 )
+# OUTPUT[6]:	  1	 1 (BIN: 00000001, HEX: 0x01 )
+# OUTPUT[5]:	  0	 0 (BIN: 00000000, HEX: 0x00 )
+# OUTPUT[4]:	 -8	24 (BIN: 00011000, HEX: 0x18 )
+# OUTPUT[3]:	 -2	30 (BIN: 00011110, HEX: 0x1e )
+# OUTPUT[2]:	 -2	30 (BIN: 00011110, HEX: 0x1e )
+# OUTPUT[1]:	  2	 2 (BIN: 00000010, HEX: 0x02 )
+# OUTPUT[0]:	  3	 3 (BIN: 00000011, HEX: 0x03 )
+
 q
-# End time: 16:47:02 on Apr 13,2023, Elapsed time: 0:00:55
-# Errors: 0, Warnings: 20
+# End time: 02:05:47 on Apr 16,2023, Elapsed time: 0:02:31
+# Errors: 0, Warnings: 22

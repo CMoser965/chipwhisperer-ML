@@ -7,229 +7,249 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dD:/Projects/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/EEESlab/src
+Z0 dC:/Users/mathm/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/EEESlab/src
 T_opt
-Z1 !s110 1681422367
-VOUjUCg73ISBCecHP2V7nk1
-04 8 4 work stimulus fast 0
-=1-d45d6450d47a-6438781f-1f1-c4c
-o-quiet -auto_acc_if_foreign -work work +acc
-Z2 tCvgOpt 0
+!s110 1681423561
+V^:_N1d:gMOHBQSMHWm2FR3
+Z1 04 8 4 work stimulus fast 0
+=1-d4548b51d9bb-64387cc9-9d-4328
+Z2 o-quiet -auto_acc_if_foreign -work work +acc
+Z3 tCvgOpt 0
 n@_opt
-OL;O;10.7f;67
-vbconv_layer
-Z3 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+Z4 OL;O;10.7f;67
+R0
+T_opt1
+!s110 1681624654
+V_;g2<@C9ogOT<3MKKM6JO0
 R1
+=1-d4548b51d9bb-643b8e4e-1b4-1128
+R2
+R3
+n@_opt1
+R4
+R0
+T_opt2
+Z5 !s110 1681628596
+V?o4YG=FB;il5Igdn?C`5b1
+R1
+=1-d4548b51d9bb-643b9db4-2e4-107c
+R2
+R3
+n@_opt2
+R4
+vbconv_layer
+Z6 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+R5
 !i10b 1
 !s100 j@0na6?1XRU7ion1nJUL63
 I;n3RCbW^jjC=`>[0V6THZ2
-Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z7 VDg1SIo80bB@j0V0VzS_@n1
 !s105 bconv_layer_sv_unit
 S1
 R0
-Z5 w1681378186
+Z8 w1681372485
 8bconv_layer.sv
 Fbconv_layer.sv
 L0 7
-Z6 OL;L;10.7f;67
+Z9 OL;L;10.7f;67
 r1
 !s85 0
 31
-Z7 !s108 1681422367.000000
-Z8 !s107 data.sv|popcnt.sv|blast_layer.sv|blin_layer.sv|bview_layer.sv|bconv_layer.sv|bnn.sv|top.sv|bench.sv|
-Z9 !s90 -reportprogress|300|bench.sv|top.sv|bnn.sv|bconv_layer.sv|bview_layer.sv|blin_layer.sv|blast_layer.sv|popcnt.sv|data.sv|
+Z10 !s108 1681628596.000000
+Z11 !s107 data.sv|popcnt.sv|blast_layer.sv|blin_layer.sv|bview_layer.sv|bconv_layer.sv|bnn.sv|top.sv|bench.sv|
+Z12 !s90 -reportprogress|300|bench.sv|top.sv|bnn.sv|bconv_layer.sv|bview_layer.sv|blin_layer.sv|blast_layer.sv|popcnt.sv|data.sv|
 !i113 0
-Z10 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R2
-vblast_layer
+Z13 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R3
-R1
+vblast_layer
+R6
+R5
 !i10b 1
 !s100 ]loXo[Cd?cEb`oAl6Wfkl0
 IgX2jARZQdE`cOLT6@eV9X1
-R4
+R7
 !s105 blast_layer_sv_unit
 S1
 R0
-R5
+R8
 8blast_layer.sv
 Fblast_layer.sv
 L0 7
-R6
+R9
 r1
 !s85 0
 31
-R7
-R8
-R9
-!i113 0
 R10
-R2
-vblin_layer
+R11
+R12
+!i113 0
+R13
 R3
-R1
+vblin_layer
+R6
+R5
 !i10b 1
 !s100 ;=[b^Y3C:2^W]<f@ZYQi>1
 II5B;UHaAVY:UdbcN1h?R73
-R4
+R7
 !s105 blin_layer_sv_unit
 S1
 R0
-R5
+R8
 8blin_layer.sv
 Fblin_layer.sv
 L0 7
-R6
+R9
 r1
 !s85 0
 31
-R7
-R8
-R9
-!i113 0
 R10
-R2
-vbnn
+R11
+R12
+!i113 0
+R13
 R3
-R1
+vbnn
+R6
+R5
 !i10b 1
-!s100 :>1@RgIKNzRRP855U9Q[_1
-IN==2e7TOY@kmJgW;fXIHc1
-R4
+!s100 oUShKG`lLB3bdeRQ@ebQN2
+IE`oE;75CDLz@a?IM]Z^fS3
+R7
 !s105 bnn_sv_unit
 S1
 R0
-w1681421856
+w1681628334
 8bnn.sv
 Fbnn.sv
 L0 1
-R6
+R9
 r1
 !s85 0
 31
-R7
-R8
-R9
-!i113 0
 R10
-R2
-vbview_layer
+R11
+R12
+!i113 0
+R13
 R3
-R1
+vbview_layer
+R6
+R5
 !i10b 1
 !s100 TJa6bROLT>hMclB866VRL3
 IVk5^0`J8`_IliFXl2@Adj0
-R4
+R7
 !s105 bview_layer_sv_unit
 S1
 R0
-R5
+R8
 8bview_layer.sv
 Fbview_layer.sv
 L0 6
-R6
+R9
 r1
 !s85 0
 31
-R7
-R8
-R9
-!i113 0
 R10
-R2
-vparameters
+R11
+R12
+!i113 0
+R13
 R3
-R1
+vparameters
+R6
+R5
 !i10b 1
 !s100 L_1D8C05]?@;KZi@Z7I932
 I@`lKAQh`deW5G=>e]9Ae_0
-R4
+R7
 !s105 data_sv_unit
 S1
 R0
-w1681411000
+w1681423382
 8data.sv
 Fdata.sv
 L0 1
-R6
+R9
 r1
 !s85 0
 31
-R7
-R8
-R9
-!i113 0
 R10
-R2
-vpopcnt_hw
+R11
+R12
+!i113 0
+R13
 R3
-R1
+vpopcnt_hw
+R6
+R5
 !i10b 1
 !s100 NW[bZiQRbIXD^`]kk27Jj0
 IPPFI<dh<c1JK0IaA@EJGz2
-R4
+R7
 !s105 popcnt_sv_unit
 S1
 R0
-R5
+R8
 8popcnt.sv
 Fpopcnt.sv
 L0 6
-R6
+R9
 r1
 !s85 0
 31
-R7
-R8
-R9
-!i113 0
 R10
-R2
-vstimulus
+R11
+R12
+!i113 0
+R13
 R3
-R1
+vstimulus
+R6
+R5
 !i10b 1
-!s100 V5PiX22jVfCX8QWa;aT=D1
-IB3SEI3jS]2CW?PbFz1dgH1
-R4
+!s100 l7nZR4ReePag2kD`8@E6e0
+IRQgb>=5Aa]4D@c<TW^X583
+R7
 !s105 bench_sv_unit
 S1
 R0
-w1681422349
+w1681628179
 8bench.sv
 Fbench.sv
 L0 1
-R6
+R9
 r1
 !s85 0
 31
-R7
-R8
-R9
-!i113 0
 R10
-R2
-vtop
+R11
+R12
+!i113 0
+R13
 R3
-R1
+vtop
+R6
+R5
 !i10b 1
 !s100 ]:3R_S_]gJAVUfa6GiCj:3
 I[Y_01__`bAL8J<JDB`jT^0
-R4
+R7
 !s105 top_sv_unit
 S1
 R0
-w1681418839
+w1681423393
 8top.sv
 Ftop.sv
 L0 1
-R6
+R9
 r1
 !s85 0
 31
-R7
-R8
-R9
-!i113 0
 R10
-R2
+R11
+R12
+!i113 0
+R13
+R3
