@@ -1,4 +1,4 @@
-module LCD_Controller (
+module LCD_Controller ( // https://www.openhacks.com/uploadsproductos/eone-1602a1.pdf
     input  logic [9:0][4:0] values,
     input clk,
     input rst,
