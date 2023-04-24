@@ -2,8 +2,8 @@
 ######## HARDWARE ON BOARD
 
 #LEDs
-#set_property DRIVE 8 [get_ports led1]
-#set_property PACKAGE_PIN T2 [get_ports led1]
+set_property DRIVE 8 [get_ports done]
+set_property PACKAGE_PIN T2 [get_ports done]
 
 #set_property DRIVE 8 [get_ports led2]
 #set_property PACKAGE_PIN T3 [get_ports led2]
@@ -16,10 +16,10 @@
 #set_property PACKAGE_PIN K16 [get_ports k16_sel]
 #set_property PACKAGE_PIN L14 [get_ports l14_sel]
 #set_property PACKAGE_PIN K15 [get_ports k15_sel]
-set_property PACKAGE_PIN R1 [get_ports pushbutton]
+#set_property PACKAGE_PIN R1 [get_ports pushbutton]
 
 #PLL Connections
-set_property PACKAGE_PIN N13 [get_ports pll_clk1]
+#set_property PACKAGE_PIN N13 [get_ports pll_clk1]
 #set_property PACKAGE_PIN E12 [get_ports pll_clk2]
 
 ######## 20-Pin Connector
@@ -47,13 +47,13 @@ set_property PACKAGE_PIN K2 [get_ports {usb_data[7]}]
 set_property PACKAGE_PIN F4 [get_ports {usb_addr[0]}]
 set_property PACKAGE_PIN G5 [get_ports {usb_addr[1]}]
 set_property PACKAGE_PIN J1 [get_ports {usb_addr[2]}]
-set_property PACKAGE_PIN H1 [get_ports {en}]
+set_property PACKAGE_PIN H1 [get_ports en]
 #{usb_addr[3]}]
-set_property PACKAGE_PIN H2 [get_ports {rst}]
+set_property PACKAGE_PIN H2 [get_ports rst]
 #{usb_addr[4]}]
-set_property PACKAGE_PIN A12 [get_ports {RS}]
-set_property PACKAGE_PIN A14 [get_ports {RW}]
-set_property PACKAGE_PIN A15 [get_ports {E}]
+set_property PACKAGE_PIN A12 [get_ports RS]
+set_property PACKAGE_PIN A14 [get_ports RW]
+set_property PACKAGE_PIN A15 [get_ports E]
 set_property PACKAGE_PIN B12 [get_ports {DB[0]}]
 set_property PACKAGE_PIN A13 [get_ports {DB[1]}]
 set_property PACKAGE_PIN B15 [get_ports {DB[2]}]
@@ -91,11 +91,11 @@ create_clock -period 10.000 -name usb_clk -waveform {0.000 5.000} [get_nets usb_
 #create_clock -period 20.000 -name pll_clk1 -waveform {0.000 10.000} [get_nets pll_clk1]
 
 # both input clocks have same properties so there is no point in doing timing analysis for both:
-set_case_analysis 1 [get_pins U_clocks/CCLK_MUX/S]
+#set_case_analysis 1 [get_pins U_clocks/CCLK_MUX/S]
 
 # No spec for these, seems sensible:
-set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
-set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_data]
+#set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
+#set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_data]
 #set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_trigger]
 #set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_cen]
 #set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_rdn]
@@ -108,13 +108,13 @@ set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_data]
 #set_output_delay -clock usb_clk 0.000 [get_ports led1]
 #set_output_delay -clock usb_clk 0.000 [get_ports led2]
 #set_output_delay -clock usb_clk 0.000 [get_ports led3]
-set_output_delay -clock usb_clk 0.000 [get_ports usb_data]
+#set_output_delay -clock usb_clk 0.000 [get_ports usb_data]
 #set_output_delay -clock usb_clk 0.000 [get_ports tio_trigger]
 #set_output_delay -clock usb_clk 0.000 [get_ports tio_clkout]
 #set_false_path -to [get_ports led1]
 #set_false_path -to [get_ports led2]
 #set_false_path -to [get_ports led3]
-set_false_path -to [get_ports usb_data]
+#set_false_path -to [get_ports usb_data]
 #set_false_path -to [get_ports tio_trigger]
 #set_false_path -to [get_ports tio_clkout]
 
@@ -122,7 +122,7 @@ set_property CFGBVS VCCO [current_design]
 set_property CONFIG_VOLTAGE 3.3 [current_design]
 
 set_property BITSTREAM.CONFIG.USR_ACCESS TIMESTAMP [current_design]
-set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
-set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
-set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
-connect_debug_port dbg_hub/clk [get_nets usb_clk_buf]
+#set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
+#set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
+#set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
+#connect_debug_port dbg_hub/clk [get_nets usb_clk_buf]

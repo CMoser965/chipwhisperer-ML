@@ -21,11 +21,11 @@
 
 
 module cw305_top(
-        input   usb_clk, en, rst,
-        input   [7:0] usb_data,
-        input   [2:0] usb_addr,
-        output  done, RS, RW, E,
-        output  [7:0]    DB
+        input  logic  usb_clk, en, rst,
+        input  logic  [7:0] usb_data,
+        input  logic  [2:0] usb_addr,
+        output logic  done, RS, RW, E,
+        output logic  [7:0]    DB
     );
     
     reg [0:0][7:0][7:0]  image;

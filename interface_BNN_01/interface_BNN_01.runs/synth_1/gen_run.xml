@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tftg256-2" LaunchTime="1682315988" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/cw305_top.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a100tftg256-2" LaunchTime="1682341827" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/cw305_top.dcp">
   <File Type="PA-TCL" Name="cw305_top.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="cw305_top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="cw305_top_reports.tcl"/>
@@ -184,6 +184,7 @@
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/interface/cw305.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
