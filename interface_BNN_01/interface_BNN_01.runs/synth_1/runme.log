@@ -1,0 +1,523 @@
+
+*** Running vivado
+    with args -log cw305_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source cw305_top.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source cw305_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1000.332 ; gain = 116.285
+Command: read_checkpoint -auto_incremental -incremental C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/utils_1/imports/synth_1/cw305_top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/utils_1/imports/synth_1/cw305_top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top cw305_top -part xc7a100tftg256-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tftg256-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 18900
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1826.961 ; gain = 407.652
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'cw305_top' [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/new/cw305_top.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'image_stream_decoder' [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/signal_proc/decoder.sv:1]
+INFO: [Synth 8-226] default block is never used [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/signal_proc/decoder.sv:13]
+INFO: [Synth 8-6157] synthesizing module 'flopenr' [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/signal_proc/decoder.sv:30]
+	Parameter WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'flopenr' (0#1) [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/signal_proc/decoder.sv:30]
+INFO: [Synth 8-6155] done synthesizing module 'image_stream_decoder' (0#1) [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/signal_proc/decoder.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/top.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'bnn' [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/bnn.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'bconv_layer' [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/bconv_layer.sv:7]
+	Parameter ISIZE_W bound to: 8 - type: integer 
+	Parameter ISIZE_H bound to: 8 - type: integer 
+	Parameter ISIZE_FEAT bound to: 1 - type: integer 
+	Parameter OSIZE_W bound to: 3 - type: integer 
+	Parameter OSIZE_H bound to: 3 - type: integer 
+	Parameter OSIZE_FEAT bound to: 32 - type: integer 
+	Parameter CONV_KW bound to: 3 - type: integer 
+	Parameter CONV_SW bound to: 1 - type: integer 
+	Parameter CONV_PW bound to: 1 - type: integer 
+	Parameter CONV_KH bound to: 3 - type: integer 
+	Parameter CONV_SH bound to: 1 - type: integer 
+	Parameter CONV_PH bound to: 1 - type: integer 
+	Parameter POOL_SW bound to: 2 - type: integer 
+	Parameter POOL_PW bound to: 2 - type: integer 
+	Parameter POOL_SH bound to: 2 - type: integer 
+	Parameter POOL_PH bound to: 2 - type: integer 
+	Parameter N_RECFIELDS bound to: 64 - type: integer 
+	Parameter LENGHT_RECFIELDS bound to: 9 - type: integer 
+	Parameter N_BITCONV bound to: 3 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'popcnt_hw' [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/popcnt.sv:6]
+	Parameter INPUT_WIDTH bound to: 9 - type: integer 
+	Parameter OUTPUT_WIDTH bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'popcnt_hw' (0#1) [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/popcnt.sv:6]
+INFO: [Synth 8-6155] done synthesizing module 'bconv_layer' (0#1) [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/bconv_layer.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'bview_layer' [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/bview_layer.sv:6]
+	Parameter ISIZE_W bound to: 3 - type: integer 
+	Parameter ISIZE_H bound to: 3 - type: integer 
+	Parameter ISIZE_FEAT bound to: 32 - type: integer 
+	Parameter OSIZE_FEAT bound to: 288 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'bview_layer' (0#1) [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/bview_layer.sv:6]
+INFO: [Synth 8-6157] synthesizing module 'blin_layer' [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/blin_layer.sv:7]
+	Parameter ISIZE_FEAT bound to: 288 - type: integer 
+	Parameter OSIZE_FEAT bound to: 64 - type: integer 
+	Parameter N_BITCONV bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'popcnt_hw__parameterized0' [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/popcnt.sv:6]
+	Parameter INPUT_WIDTH bound to: 288 - type: integer 
+	Parameter OUTPUT_WIDTH bound to: 10 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'popcnt_hw__parameterized0' (0#1) [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/popcnt.sv:6]
+INFO: [Synth 8-6155] done synthesizing module 'blin_layer' (0#1) [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/blin_layer.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'blast_layer' [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/blast_layer.sv:7]
+	Parameter ISIZE_FEAT bound to: 64 - type: integer 
+	Parameter OSIZE_FEAT bound to: 10 - type: integer 
+	Parameter N_BITCONV bound to: 5 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'popcnt_hw__parameterized1' [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/popcnt.sv:6]
+	Parameter INPUT_WIDTH bound to: 64 - type: integer 
+	Parameter OUTPUT_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'popcnt_hw__parameterized1' (0#1) [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/popcnt.sv:6]
+INFO: [Synth 8-6155] done synthesizing module 'blast_layer' (0#1) [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/blast_layer.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'bnn' (0#1) [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/bnn.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'parameters' [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/data.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'parameters' (0#1) [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/data.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/top.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'LCD_Controller' [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/signal_proc/LCD_Controller.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'LCD_Controller' (0#1) [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/signal_proc/LCD_Controller.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'cw305_top' (0#1) [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/new/cw305_top.sv:23]
+WARNING: [Synth 8-7129] Port values[9][4] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[9][3] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[9][2] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[9][1] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[9][0] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[8][4] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[8][3] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[8][2] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[8][1] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[8][0] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[7][4] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[7][3] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[7][2] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[7][1] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[7][0] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[6][4] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[6][3] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[6][2] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[6][1] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[6][0] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[5][4] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[5][3] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[5][2] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[5][1] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[5][0] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[4][4] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[4][3] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[4][2] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[4][1] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[4][0] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[3][4] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[3][3] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[3][2] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[3][1] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[3][0] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[2][4] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[2][3] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[2][2] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[2][1] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[2][0] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[1][4] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[1][3] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[1][2] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[1][1] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[1][0] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[0][4] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[0][3] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[0][2] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[0][1] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[0][0] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port en in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[9][4] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[9][3] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[9][2] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[9][1] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[9][0] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[8][4] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[8][3] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[8][2] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[8][1] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[8][0] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[7][4] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[7][3] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[7][2] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[7][1] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[7][0] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[6][4] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[6][3] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[6][2] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[6][1] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[6][0] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[5][4] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[5][3] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[5][2] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[5][1] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[5][0] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[4][4] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[4][3] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[4][2] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[4][1] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[4][0] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[3][4] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[3][3] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[3][2] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[3][1] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[3][0] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[2][4] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[2][3] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[2][2] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[2][1] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[2][0] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[1][4] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[1][3] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[1][2] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[1][1] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[1][0] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[0][4] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[0][3] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[0][2] in module bnn is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:35 . Memory (MB): peak = 2273.020 ; gain = 853.711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:36 . Memory (MB): peak = 2273.020 ; gain = 853.711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:36 . Memory (MB): peak = 2273.020 ; gain = 853.711
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2273.020 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/constrs_1/imports/interface/cw305.xdc]
+WARNING: [Vivado 12-584] No ports matched 'pushbutton'. [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/constrs_1/imports/interface/cw305.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/constrs_1/imports/interface/cw305.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pll_clk1'. [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/constrs_1/imports/interface/cw305.xdc:22]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/constrs_1/imports/interface/cw305.xdc:22]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-508] No pins matched 'U_clocks/CCLK_MUX/S'. [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/constrs_1/imports/interface/cw305.xdc:94]
+CRITICAL WARNING: [Constraints 18-602] set_output_delay: list contains '8' objects of types '(port)' other than the types '(output port,internal pin)' supported by the constraint. These objects will not be used for this constraint. Please review the object list and ensure unsupported object types are removed. [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/constrs_1/imports/interface/cw305.xdc:111]
+CRITICAL WARNING: [Constraints 18-472] set_output_delay: list does not contain any object of type(s) '(output port,internal pin)' supported by the constraint. The constraint will not be applied. Please check to make sure that this is intended. [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/constrs_1/imports/interface/cw305.xdc:111]
+WARNING: [Constraints 18-401] set_false_path: 'usb_data[0]' is not a valid endpoint. [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/constrs_1/imports/interface/cw305.xdc:117]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_false_path: 'usb_data[1]' is not a valid endpoint. [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/constrs_1/imports/interface/cw305.xdc:117]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_false_path: 'usb_data[2]' is not a valid endpoint. [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/constrs_1/imports/interface/cw305.xdc:117]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_false_path: 'usb_data[3]' is not a valid endpoint. [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/constrs_1/imports/interface/cw305.xdc:117]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_false_path: 'usb_data[4]' is not a valid endpoint. [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/constrs_1/imports/interface/cw305.xdc:117]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_false_path: 'usb_data[5]' is not a valid endpoint. [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/constrs_1/imports/interface/cw305.xdc:117]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_false_path: 'usb_data[6]' is not a valid endpoint. [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/constrs_1/imports/interface/cw305.xdc:117]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_false_path: 'usb_data[7]' is not a valid endpoint. [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/constrs_1/imports/interface/cw305.xdc:117]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+CRITICAL WARNING: [Constraints 18-512] set_false_path: list of objects specified for '-to' option contains no valid endpoints. Please check to make sure at least one valid endpoint is specified. [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/constrs_1/imports/interface/cw305.xdc:117]
+Finished Parsing XDC File [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/constrs_1/imports/interface/cw305.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/constrs_1/imports/interface/cw305.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/cw305_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/cw305_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 2422.535 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.263 . Memory (MB): peak = 2422.535 ; gain = 0.000
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:31 ; elapsed = 00:01:06 . Memory (MB): peak = 2422.535 ; gain = 1003.227
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tftg256-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:31 ; elapsed = 00:01:06 . Memory (MB): peak = 2422.535 ; gain = 1003.227
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:00:36 ; elapsed = 00:01:17 . Memory (MB): peak = 2422.535 ; gain = 1003.227
+---------------------------------------------------------------------------------
+bnn__GC0bconv_layer__GB1bconv_layer__GB0bconv_layer__GB2blin_layer__GB3blin_layer__GB5bconv_layer__GB4blin_layer__GB4blin_layer__GB2cw305_top__GC0bconv_layer__GB3blin_layer__GB0blin_layer__GB1---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:39 ; elapsed = 00:01:21 . Memory (MB): peak = 2423.324 ; gain = 1004.016
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:41 ; elapsed = 00:01:24 . Memory (MB): peak = 2423.324 ; gain = 1004.016
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Mimic Skeleton from Reference
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Mimic Skeleton from Reference : Time (s): cpu = 00:00:43 ; elapsed = 00:01:27 . Memory (MB): peak = 2423.324 ; gain = 1004.016
+---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: yes
+
+   Stitch points used : changed
+
+
+2. Change Summary
+
+Report Incremental Modules: 
++-+----------------+------------+----------+----------+
+| |Changed Modules |Replication |Instances |Changed % |
++-+----------------+------------+----------+----------+
++-+----------------+------------+----------+----------+
+
+
+   Full Design Size (number of cells) : 256211
+   Resynthesis Design Size (number of cells) : 0
+   Resynth % : 0.0000,  Reuse % : 100.0000
+
+3. Reference Checkpoint Information
+
++-------------------------------------------------------------------------------------------------------------------------------+
+| DCP Location:  | C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/utils_1/imports/synth_1/cw305_top.dcp |
++-------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------+------------------------------+
+|         DCP Information        |             Value            |
++--------------------------------+------------------------------+
+| Vivado Version                 |                    v2022.2 |
+| DCP State                      |                              |
++--------------------------------+------------------------------+
+
+
+
+Report RTL Partitions: 
++------+-------------------------+------------+----------+
+|      |RTL Partition            |Replication |Instances |
++------+-------------------------+------------+----------+
+|1     |bconv_layer__GB0_#REUSE# |           1|         0|
+|2     |bconv_layer__GB1_#REUSE# |           1|         0|
+|3     |bconv_layer__GB2_#REUSE# |           1|         0|
+|4     |bconv_layer__GB3_#REUSE# |           1|         0|
+|5     |bconv_layer__GB4_#REUSE# |           1|         0|
+|6     |blin_layer__GB0_#REUSE#  |           1|         0|
+|7     |blin_layer__GB1_#REUSE#  |           1|         0|
+|8     |blin_layer__GB2_#REUSE#  |           1|         0|
+|9     |blin_layer__GB3_#REUSE#  |           1|         0|
+|10    |blin_layer__GB4_#REUSE#  |           1|         0|
+|11    |blin_layer__GB5_#REUSE#  |           1|         0|
+|12    |bnn__GC0_#REUSE#         |           1|         0|
+|13    |cw305_top__GC0_#REUSE#   |           1|         0|
++------+-------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7077] IncrSyn: subsequent runs will still be incremental as the reference run was parallel and that data is reused
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:01:46 . Memory (MB): peak = 2423.324 ; gain = 1004.016
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Stitch Unchanged AreaOpt Partitions
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Stitch Unchanged AreaOpt Partitions : Time (s): cpu = 00:00:49 ; elapsed = 00:01:47 . Memory (MB): peak = 2423.324 ; gain = 1004.016
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:54 ; elapsed = 00:01:58 . Memory (MB): peak = 2448.887 ; gain = 1029.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:54 ; elapsed = 00:01:58 . Memory (MB): peak = 2448.887 ; gain = 1029.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7077] IncrSyn: subsequent runs will still be incremental as the reference run was parallel and that data is reused
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:54 ; elapsed = 00:01:58 . Memory (MB): peak = 2466.953 ; gain = 1047.645
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Stitch Unchanged Partitions
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Stitch Unchanged Partitions : Time (s): cpu = 00:00:55 ; elapsed = 00:01:59 . Memory (MB): peak = 2466.953 ; gain = 1047.645
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[6][6]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[6][5]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[6][4]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[6][3]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[6][2]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[6][1]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[6][0]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[5][6]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[5][5]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[5][4]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[5][3]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[5][2]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[5][1]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[5][0]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[4][6]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[4][5]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[4][4]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[4][3]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[4][2]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[4][1]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[4][0]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[3][6]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[3][5]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[3][4]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[3][3]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[3][2]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[3][1]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[3][0]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[2][6]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[2][5]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[2][4]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[2][3]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[2][2]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[2][1]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[2][0]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[1][6]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[1][5]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[1][4]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[1][3]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[1][2]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[1][1]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[1][0]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[0][6]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[0][5]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[0][4]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[0][3]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[0][2]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[0][1]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[0][0]) is unused and will be removed from module cw305_top.
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:57 ; elapsed = 00:02:05 . Memory (MB): peak = 2474.555 ; gain = 1055.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:57 ; elapsed = 00:02:05 . Memory (MB): peak = 2474.555 ; gain = 1055.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:57 ; elapsed = 00:02:05 . Memory (MB): peak = 2474.555 ; gain = 1055.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:57 ; elapsed = 00:02:05 . Memory (MB): peak = 2474.555 ; gain = 1055.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:57 ; elapsed = 00:02:05 . Memory (MB): peak = 2474.555 ; gain = 1055.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:57 ; elapsed = 00:02:05 . Memory (MB): peak = 2474.555 ; gain = 1055.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |OBUF |    12|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:57 ; elapsed = 00:02:05 . Memory (MB): peak = 2474.555 ; gain = 1055.246
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 53 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:01:46 . Memory (MB): peak = 2474.555 ; gain = 905.730
+Synthesis Optimization Complete : Time (s): cpu = 00:00:58 ; elapsed = 00:02:07 . Memory (MB): peak = 2474.555 ; gain = 1055.246
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2486.531 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2490.207 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 8b44567b
+INFO: [Common 17-83] Releasing license: Synthesis
+47 Infos, 164 Warnings, 5 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:01 ; elapsed = 00:02:14 . Memory (MB): peak = 2490.207 ; gain = 1466.027
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.runs/synth_1/cw305_top.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2490.207 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file cw305_top_utilization_synth.rpt -pb cw305_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 24 01:02:35 2023...
