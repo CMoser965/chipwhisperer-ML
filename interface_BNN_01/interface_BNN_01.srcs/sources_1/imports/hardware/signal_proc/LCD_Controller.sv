@@ -25,11 +25,11 @@ always @(rst & en) begin // clear display
     DB[0] <= 1'b1;
 end
 
-always @(posedge clk) begin
-    counter <= counter + 1;
-    DB[7:4] <= 4'h3;
-    DB[3:0] <= counter;
-    {RS, RW} <= 2'b11;
+always_ff @(posedge clk) begin
+    counter = counter + 1;
+    DB[7:4] = 4'h3;
+    DB[3:0] = values[counter];
+    {RS, RW} = 2'b11;
 end
 
 always @(negedge clk) begin

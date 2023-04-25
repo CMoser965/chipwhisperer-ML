@@ -9,16 +9,16 @@ module image_stream_decoder (
 
 reg [7:0] slice_sel;
 
-always_latch begin  
+always @(posedge clk & en) begin  
     case(sel)       
-        3'b000  : image_o[0][7:0] = slice_sel;
-        3'b001  : image_o[1][7:0] = slice_sel;
-        3'b010  : image_o[2][7:0] = slice_sel;
-        3'b011  : image_o[3][7:0] = slice_sel;
-        3'b100  : image_o[4][7:0] = slice_sel;
-        3'b101  : image_o[5][7:0] = slice_sel;
-        3'b110  : image_o[6][7:0] = slice_sel;
-        3'b111  : image_o[7][7:0] = slice_sel;
+        3'b000  : image_o[0][7:0] <= slice_sel;
+        3'b001  : image_o[1][7:0] <= slice_sel;
+        3'b010  : image_o[2][7:0] <= slice_sel;
+        3'b011  : image_o[3][7:0] <= slice_sel;
+        3'b100  : image_o[4][7:0] <= slice_sel;
+        3'b101  : image_o[5][7:0] <= slice_sel;
+        3'b110  : image_o[6][7:0] <= slice_sel;
+        3'b111  : image_o[7][7:0] <= slice_sel;
         default : image_o = 64'b0;
     endcase
 end

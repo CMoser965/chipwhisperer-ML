@@ -21,15 +21,15 @@
 
 
 module cw305_top(
-        input  logic  usb_clk, en, rst,
-        input  logic  [7:0] usb_data,
-        input  logic  [2:0] usb_addr,
-        output logic  done, RS, RW, E,
-        output logic  [7:0]    DB
+        input  reg  usb_clk, en, rst,
+        input  reg  [7:0] usb_data,
+        input  reg  [2:0] usb_addr,
+        output reg  done, RS, RW, E,
+        output reg  [7:0]    DB
     );
     
-    reg [0:0][7:0][7:0]  image;
-    reg [9:0][4:0]       classifier;
+    reg [7:0][7:0]  image = 64'b0;
+    reg [9:0][4:0]  classifier = 50'b0;
     
     image_stream_decoder decoder(
         .slice_i(usb_data), .sel(usb_addr),

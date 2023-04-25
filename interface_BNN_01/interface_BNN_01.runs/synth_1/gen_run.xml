@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tftg256-2" LaunchTime="1682341827" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/cw305_top.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a100tftg256-2" LaunchTime="1682366436" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/cw305_top.dcp">
   <File Type="PA-TCL" Name="cw305_top.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="cw305_top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="cw305_top_reports.tcl"/>
@@ -203,7 +203,9 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>
