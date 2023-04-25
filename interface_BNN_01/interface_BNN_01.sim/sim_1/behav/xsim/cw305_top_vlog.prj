@@ -1,0 +1,19 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../interface_BNN_01.srcs/sources_1/imports/hardware/signal_proc/LCD_Controller.sv" \
+"../../../../interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/bconv_layer.sv" \
+"../../../../interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/blast_layer.sv" \
+"../../../../interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/blin_layer.sv" \
+"../../../../interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/bnn.sv" \
+"../../../../interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/bview_layer.sv" \
+"../../../../interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/data.sv" \
+"../../../../interface_BNN_01.srcs/sources_1/imports/hardware/signal_proc/decoder.sv" \
+"../../../../interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/popcnt.sv" \
+"../../../../interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/top.sv" \
+"../../../../interface_BNN_01.srcs/sources_1/new/cw305_top.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

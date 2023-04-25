@@ -1,9 +1,13 @@
 <?xml version="1.0"?>
 <Runs Version="1" Minor="0">
+<<<<<<< HEAD
 	<Run Id="synth_1" LaunchDir="C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
 	<Run Id="impl_1" LaunchDir="C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="route_design">
 		<Parent Id="synth_1"/>
 	</Run>
+=======
+	<Run Id="synth_1" LaunchDir="D:/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+>>>>>>> 08f178d4 (final push; commit; ultimate project failure and deprecation of such; to those that utilize this repo, if they exist, i wish the best, and hope you may succeed where I failed; signing off)
 	<Parameters>
 		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
 		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>

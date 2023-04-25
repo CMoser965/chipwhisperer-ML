@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.runs/synth_1/cw305_top.tcl"
+  variable script "D:/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.runs/synth_1/cw305_top.tcl"
   variable category "vivado_synth"
 }
 
@@ -71,8 +71,12 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param checkpoint.writeSynthRtdsInDcp 1
+<<<<<<< HEAD
 set_param chipscope.maxJobs 3
 set_param synth.incrementalSynthesisCache C:/Users/mathm/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-7880-SpectreGolem/incrSyn
+=======
+set_param synth.incrementalSynthesisCache C:/Users/mathm/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-64836-DESKTOP-O2SFG2L/incrSyn
+>>>>>>> 08f178d4 (final push; commit; ultimate project failure and deprecation of such; to those that utilize this repo, if they exist, i wish the best, and hope you may succeed where I failed; signing off)
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
@@ -81,26 +85,26 @@ create_project -in_memory -part xc7a100tftg256-2
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.cache/wt [current_project]
-set_property parent.project_path C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.xpr [current_project]
+set_property webtalk.parent_dir D:/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.cache/wt [current_project]
+set_property parent.project_path D:/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.cache/ip [current_project]
+set_property ip_output_repo d:/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib -sv {
-  C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/signal_proc/LCD_Controller.sv
-  C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/bconv_layer.sv
-  C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/blast_layer.sv
-  C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/blin_layer.sv
-  C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/bnn.sv
-  C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/bview_layer.sv
-  C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/data.sv
-  C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/signal_proc/decoder.sv
-  C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/popcnt.sv
-  C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/top.sv
-  C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/new/cw305_top.sv
+  D:/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/signal_proc/LCD_Controller.sv
+  D:/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/bconv_layer.sv
+  D:/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/blast_layer.sv
+  D:/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/blin_layer.sv
+  D:/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/bnn.sv
+  D:/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/bview_layer.sv
+  D:/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/data.sv
+  D:/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/signal_proc/decoder.sv
+  D:/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/popcnt.sv
+  D:/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/top.sv
+  D:/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/new/cw305_top.sv
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -111,12 +115,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/constrs_1/imports/interface/cw305.xdc
-set_property used_in_implementation false [get_files C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/constrs_1/imports/interface/cw305.xdc]
+read_xdc D:/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/constrs_1/imports/interface/cw305.xdc
+set_property used_in_implementation false [get_files D:/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/constrs_1/imports/interface/cw305.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental C:/Users/mathm/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/utils_1/imports/synth_1/cw305_top.dcp
+read_checkpoint -auto_incremental -incremental D:/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/utils_1/imports/synth_1/cw305_top.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

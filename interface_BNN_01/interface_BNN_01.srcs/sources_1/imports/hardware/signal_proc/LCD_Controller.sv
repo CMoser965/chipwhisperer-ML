@@ -25,20 +25,27 @@ always @(rst & en) begin // clear display
     DB[0] <= 1'b1;
 end
 
+<<<<<<< HEAD
 always_ff @(posedge clk) begin
     counter = counter + 1;
     DB[7:4] = 4'h3;
     DB[3:0] = values[counter];
+=======
+always @(posedge clk) begin
+    counter = counter + 1;
+    DB[7:4] = 4'h3;
+    DB[3:0] = counter;
+>>>>>>> 08f178d4 (final push; commit; ultimate project failure and deprecation of such; to those that utilize this repo, if they exist, i wish the best, and hope you may succeed where I failed; signing off)
     {RS, RW} = 2'b11;
 end
 
 always @(negedge clk) begin
-    {RS, RW, DB[7:1]} <= shiftR;
+    {RS, RW, DB[7:1]} = shiftR;
 end
 
 always @(counter[3] & ~counter[2] & counter[1] & ~counter[0]) begin
-    counter <= 4'b0;
-    done <= 1'b1;
+    counter = 4'b0;
+    done = 1'b1;
 end
 
 

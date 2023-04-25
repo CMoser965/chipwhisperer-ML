@@ -1,8 +1,13 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+<<<<<<< HEAD
 | Date         : Mon Apr 24 15:02:03 2023
 | Host         : SpectreGolem running 64-bit major release  (build 9200)
+=======
+| Date         : Mon Apr 24 09:15:58 2023
+| Host         : DESKTOP-O2SFG2L running 64-bit major release  (build 9200)
+>>>>>>> 08f178d4 (final push; commit; ultimate project failure and deprecation of such; to those that utilize this repo, if they exist, i wish the best, and hope you may succeed where I failed; signing off)
 | Command      : report_utilization -file cw305_top_utilization_synth.rpt -pb cw305_top_utilization_synth.pb
 | Design       : cw305_top
 | Device       : xc7a100tftg256-2

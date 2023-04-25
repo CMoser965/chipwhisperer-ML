@@ -1,0 +1,16 @@
+0.7
+2020.2
+Oct 14 2022
+05:20:55
+D:/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.sim/sim_1/behav/xsim/glbl.v,1665704903,verilog,,,,glbl,,uvm,,,,,,
+D:/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/bconv_layer.sv,1682342521,systemVerilog,,D:/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/blast_layer.sv,,bconv_layer,,uvm,,,,,,
+D:/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/blast_layer.sv,1682342521,systemVerilog,,D:/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/blin_layer.sv,,blast_layer,,uvm,,,,,,
+D:/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/blin_layer.sv,1682342521,systemVerilog,,D:/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/bnn.sv,,blin_layer,,uvm,,,,,,
+D:/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/bnn.sv,1682342521,systemVerilog,,D:/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/bview_layer.sv,,bnn,,uvm,,,,,,
+D:/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/bview_layer.sv,1682342521,systemVerilog,,D:/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/data.sv,,bview_layer,,uvm,,,,,,
+D:/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/data.sv,1682342521,systemVerilog,,D:/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/signal_proc/decoder.sv,,parameters,,uvm,,,,,,
+D:/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/popcnt.sv,1682342521,systemVerilog,,D:/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/top.sv,,popcnt_hw,,uvm,,,,,,
+D:/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/top.sv,1682342521,systemVerilog,,D:/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/new/cw305_top.sv,,top,,uvm,,,,,,
+D:/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/signal_proc/LCD_Controller.sv,1682344764,systemVerilog,,D:/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/bconv_layer.sv,,LCD_Controller,,uvm,,,,,,
+D:/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/signal_proc/decoder.sv,1682342521,systemVerilog,,D:/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/imports/hardware/EEESlab/src/popcnt.sv,,flopenr;image_stream_decoder,,uvm,,,,,,
+D:/chipwhisperer-ML/interface_BNN_01/interface_BNN_01.srcs/sources_1/new/cw305_top.sv,1682343490,systemVerilog,,,,cw305_top,,uvm,,,,,,

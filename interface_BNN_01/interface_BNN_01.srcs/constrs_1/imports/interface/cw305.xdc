@@ -32,6 +32,7 @@ set_property PACKAGE_PIN T2 [get_ports done]
 
 ####### USB Connector
 
+#create_clock -period 10.000 -name usb_clk -waveform {0.000 5.000} [get_nets usb_clk]
 set_property PACKAGE_PIN F5 [get_ports usb_clk]
 
 set_property IOSTANDARD LVCMOS33 [get_ports *]
@@ -86,7 +87,7 @@ set_property PACKAGE_PIN C13 [get_ports {DB[7]}]
 #set_property PACKAGE_PIN A5 [get_ports usb_trigger]
 
 
-create_clock -period 10.000 -name usb_clk -waveform {0.000 5.000} [get_nets usb_clk]
+#create_clock -period 10.000 -name usb_clk -waveform {0.000 5.000} [get_nets usb_clk]
 #create_clock -period 20.000 -name tio_clkin -waveform {0.000 10.000} [get_nets tio_clkin]
 #create_clock -period 20.000 -name pll_clk1 -waveform {0.000 10.000} [get_nets pll_clk1]
 

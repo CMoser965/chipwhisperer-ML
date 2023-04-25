@@ -1,5 +1,9 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
+<<<<<<< HEAD
     <Process Command="vivado.bat" Owner="mathm" Host="SPECTREGOLEM" Pid="16592" HostCore="12" HostMemory="016858472448">
+=======
+    <Process Command="vivado.bat" Owner="mathm" Host="DESKTOP-O2SFG2L" Pid="45424" HostCore="12" HostMemory="034272473088">
+>>>>>>> 08f178d4 (final push; commit; ultimate project failure and deprecation of such; to those that utilize this repo, if they exist, i wish the best, and hope you may succeed where I failed; signing off)
     </Process>
 </ProcessHandle>

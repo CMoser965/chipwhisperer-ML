@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <GenRun Id="synth_1" LaunchPart="xc7a100tftg256-2" LaunchTime="1682366436" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/cw305_top.dcp">
+=======
+<GenRun Id="synth_1" LaunchPart="xc7a100tftg256-2" LaunchTime="1682345638" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/cw305_top.dcp">
+>>>>>>> 08f178d4 (final push; commit; ultimate project failure and deprecation of such; to those that utilize this repo, if they exist, i wish the best, and hope you may succeed where I failed; signing off)
   <File Type="PA-TCL" Name="cw305_top.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="cw305_top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="cw305_top_reports.tcl"/>

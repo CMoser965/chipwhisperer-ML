@@ -19,7 +19,7 @@ always_comb begin
         3'b101  : image_o[5][7:0] = slice_sel;
         3'b110  : image_o[6][7:0] = slice_sel;
         3'b111  : image_o[7][7:0] = slice_sel;
-        default : break;
+        default : slice_sel = 8'b0;
     endcase
 end
 

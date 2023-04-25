@@ -1,0 +1,689 @@
+
+*** Running vivado
+    with args -log cw305_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source cw305_top.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source cw305_top.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental D:/chipwhisperer-ML/interface_02/interface_02.srcs/utils_1/imports/synth_1/cw305_top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from D:/chipwhisperer-ML/interface_02/interface_02.srcs/utils_1/imports/synth_1/cw305_top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top cw305_top -part xc7a100tftg256-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tftg256-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 52764
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1830.797 ; gain = 407.680
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'cw305_top' [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305_top.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'image_stream_decoder' [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/signal_proc/decoder.sv:1]
+INFO: [Synth 8-226] default block is never used [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/signal_proc/decoder.sv:13]
+INFO: [Synth 8-6157] synthesizing module 'flopenr' [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/signal_proc/decoder.sv:30]
+	Parameter WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'flopenr' (0#1) [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/signal_proc/decoder.sv:30]
+INFO: [Synth 8-6155] done synthesizing module 'image_stream_decoder' (0#1) [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/signal_proc/decoder.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'top' [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/EEESlab/src/top.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'bnn' [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/EEESlab/src/bnn.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'bconv_layer' [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/EEESlab/src/bconv_layer.sv:7]
+	Parameter ISIZE_W bound to: 8 - type: integer 
+	Parameter ISIZE_H bound to: 8 - type: integer 
+	Parameter ISIZE_FEAT bound to: 1 - type: integer 
+	Parameter OSIZE_W bound to: 3 - type: integer 
+	Parameter OSIZE_H bound to: 3 - type: integer 
+	Parameter OSIZE_FEAT bound to: 32 - type: integer 
+	Parameter CONV_KW bound to: 3 - type: integer 
+	Parameter CONV_SW bound to: 1 - type: integer 
+	Parameter CONV_PW bound to: 1 - type: integer 
+	Parameter CONV_KH bound to: 3 - type: integer 
+	Parameter CONV_SH bound to: 1 - type: integer 
+	Parameter CONV_PH bound to: 1 - type: integer 
+	Parameter POOL_SW bound to: 2 - type: integer 
+	Parameter POOL_PW bound to: 2 - type: integer 
+	Parameter POOL_SH bound to: 2 - type: integer 
+	Parameter POOL_PH bound to: 2 - type: integer 
+	Parameter N_RECFIELDS bound to: 64 - type: integer 
+	Parameter LENGHT_RECFIELDS bound to: 9 - type: integer 
+	Parameter N_BITCONV bound to: 3 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'popcnt_hw' [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/EEESlab/src/popcnt.sv:6]
+	Parameter INPUT_WIDTH bound to: 9 - type: integer 
+	Parameter OUTPUT_WIDTH bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'popcnt_hw' (0#1) [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/EEESlab/src/popcnt.sv:6]
+INFO: [Synth 8-6155] done synthesizing module 'bconv_layer' (0#1) [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/EEESlab/src/bconv_layer.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'bview_layer' [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/EEESlab/src/bview_layer.sv:6]
+	Parameter ISIZE_W bound to: 3 - type: integer 
+	Parameter ISIZE_H bound to: 3 - type: integer 
+	Parameter ISIZE_FEAT bound to: 32 - type: integer 
+	Parameter OSIZE_FEAT bound to: 288 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'bview_layer' (0#1) [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/EEESlab/src/bview_layer.sv:6]
+INFO: [Synth 8-6157] synthesizing module 'blin_layer' [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/EEESlab/src/blin_layer.sv:7]
+	Parameter ISIZE_FEAT bound to: 288 - type: integer 
+	Parameter OSIZE_FEAT bound to: 64 - type: integer 
+	Parameter N_BITCONV bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'popcnt_hw__parameterized0' [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/EEESlab/src/popcnt.sv:6]
+	Parameter INPUT_WIDTH bound to: 288 - type: integer 
+	Parameter OUTPUT_WIDTH bound to: 10 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'popcnt_hw__parameterized0' (0#1) [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/EEESlab/src/popcnt.sv:6]
+INFO: [Synth 8-6155] done synthesizing module 'blin_layer' (0#1) [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/EEESlab/src/blin_layer.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'blast_layer' [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/EEESlab/src/blast_layer.sv:7]
+	Parameter ISIZE_FEAT bound to: 64 - type: integer 
+	Parameter OSIZE_FEAT bound to: 10 - type: integer 
+	Parameter N_BITCONV bound to: 5 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'popcnt_hw__parameterized1' [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/EEESlab/src/popcnt.sv:6]
+	Parameter INPUT_WIDTH bound to: 64 - type: integer 
+	Parameter OUTPUT_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'popcnt_hw__parameterized1' (0#1) [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/EEESlab/src/popcnt.sv:6]
+INFO: [Synth 8-6155] done synthesizing module 'blast_layer' (0#1) [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/EEESlab/src/blast_layer.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'bnn' (0#1) [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/EEESlab/src/bnn.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'parameters' [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/EEESlab/src/data.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'parameters' (0#1) [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/EEESlab/src/data.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/EEESlab/src/top.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'LCD_Controller' [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/signal_proc/LCD_Controller.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'LCD_Controller' (0#1) [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/signal_proc/LCD_Controller.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'cw305_top' (0#1) [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305_top.sv:23]
+WARNING: [Synth 8-87] always_comb on 'image_o_reg[7]' did not result in combinational logic [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/signal_proc/decoder.sv:14]
+WARNING: [Synth 8-87] always_comb on 'image_o_reg[6]' did not result in combinational logic [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/signal_proc/decoder.sv:14]
+WARNING: [Synth 8-87] always_comb on 'image_o_reg[5]' did not result in combinational logic [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/signal_proc/decoder.sv:14]
+WARNING: [Synth 8-87] always_comb on 'image_o_reg[4]' did not result in combinational logic [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/signal_proc/decoder.sv:14]
+WARNING: [Synth 8-87] always_comb on 'image_o_reg[3]' did not result in combinational logic [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/signal_proc/decoder.sv:14]
+WARNING: [Synth 8-87] always_comb on 'image_o_reg[2]' did not result in combinational logic [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/signal_proc/decoder.sv:14]
+WARNING: [Synth 8-87] always_comb on 'image_o_reg[1]' did not result in combinational logic [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/signal_proc/decoder.sv:14]
+WARNING: [Synth 8-87] always_comb on 'image_o_reg[0]' did not result in combinational logic [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/signal_proc/decoder.sv:14]
+WARNING: [Synth 8-3848] Net DB[7] in module/entity cw305_top does not have driver. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305_top.sv:28]
+WARNING: [Synth 8-3848] Net DB[6] in module/entity cw305_top does not have driver. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305_top.sv:28]
+WARNING: [Synth 8-3848] Net DB[5] in module/entity cw305_top does not have driver. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305_top.sv:28]
+WARNING: [Synth 8-3848] Net DB[4] in module/entity cw305_top does not have driver. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305_top.sv:28]
+WARNING: [Synth 8-3848] Net DB[3] in module/entity cw305_top does not have driver. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305_top.sv:28]
+WARNING: [Synth 8-3848] Net DB[2] in module/entity cw305_top does not have driver. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305_top.sv:28]
+WARNING: [Synth 8-3848] Net DB[1] in module/entity cw305_top does not have driver. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305_top.sv:28]
+WARNING: [Synth 8-3848] Net DB[0] in module/entity cw305_top does not have driver. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305_top.sv:28]
+WARNING: [Synth 8-7129] Port values[9][4] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[9][3] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[9][2] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[9][1] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[9][0] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[8][4] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[8][3] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[8][2] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[8][1] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[8][0] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[7][4] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[7][3] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[7][2] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[7][1] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[7][0] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[6][4] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[6][3] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[6][2] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[6][1] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[6][0] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[5][4] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[5][3] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[5][2] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[5][1] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[5][0] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[4][4] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[4][3] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[4][2] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[4][1] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[4][0] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[3][4] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[3][3] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[3][2] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[3][1] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[3][0] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[2][4] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[2][3] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[2][2] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[2][1] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[2][0] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[1][4] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[1][3] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[1][2] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[1][1] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[1][0] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[0][4] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[0][3] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[0][2] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[0][1] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port values[0][0] in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port en in module LCD_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[9][4] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[9][3] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[9][2] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[9][1] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[9][0] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[8][4] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[8][3] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[8][2] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[8][1] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[8][0] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[7][4] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[7][3] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[7][2] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[7][1] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[7][0] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[6][4] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[6][3] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[6][2] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[6][1] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[6][0] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[5][4] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[5][3] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[5][2] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[5][1] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[5][0] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[4][4] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[4][3] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[4][2] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[4][1] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[4][0] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[3][4] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[3][3] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[3][2] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[3][1] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[3][0] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[2][4] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[2][3] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[2][2] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[2][1] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[2][0] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[1][4] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[1][3] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[1][2] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[1][1] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[1][0] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[0][4] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[0][3] in module bnn is either unconnected or has no load
+WARNING: [Synth 8-7129] Port threshold_i_2[0][2] in module bnn is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2274.562 ; gain = 851.445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2274.562 ; gain = 851.445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2274.562 ; gain = 851.445
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2274.562 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc]
+WARNING: [Vivado 12-584] No ports matched 'led1'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:5]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:5]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led1'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:6]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:6]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led2'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:8]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:8]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led2'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:9]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:9]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led3'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:11]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:11]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led3'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:12]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:12]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'j16_sel'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'k16_sel'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'l14_sel'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'k15_sel'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pushbutton'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pll_clk1'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:22]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:22]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tio_trigger'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tio_clkout'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tio_clkin'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:31]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:31]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'usb_addr[3]'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:50]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:50]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'usb_addr[4]'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:51]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:51]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'usb_addr[5]'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:52]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:52]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'usb_addr[6]'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:53]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:53]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'usb_addr[7]'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'usb_addr[8]'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:55]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'usb_addr[9]'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:56]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:56]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'usb_addr[10]'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:57]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:57]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'usb_addr[11]'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:58]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:58]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'usb_addr[12]'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:59]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:59]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'usb_addr[13]'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:60]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:60]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'usb_addr[14]'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:61]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:61]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'usb_addr[15]'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:62]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:62]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'usb_addr[16]'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:63]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:63]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'usb_addr[17]'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:64]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:64]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'usb_addr[18]'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:65]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:65]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'usb_addr[19]'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:66]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:66]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'usb_addr[20]'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:67]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:67]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'usb_rdn'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:69]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:69]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'usb_wrn'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:70]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'usb_cen'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:71]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:71]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'usb_trigger'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:73]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:73]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'tio_clkin'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:77]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_nets tio_clkin]'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:77]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-507] No nets matched 'pll_clk1'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:78]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_nets pll_clk1]'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:78]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-508] No pins matched 'U_clocks/CCLK_MUX/S'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:81]
+WARNING: [Vivado 12-584] No ports matched 'usb_addr'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:84]
+CRITICAL WARNING: [Vivado 12-4739] set_input_delay:No valid object(s) found for '-objects [get_ports usb_addr]'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:84]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'usb_data'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:85]
+CRITICAL WARNING: [Vivado 12-4739] set_input_delay:No valid object(s) found for '-objects [get_ports usb_data]'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:85]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'usb_trigger'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:86]
+CRITICAL WARNING: [Vivado 12-4739] set_input_delay:No valid object(s) found for '-objects [get_ports usb_trigger]'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:86]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'usb_cen'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:87]
+CRITICAL WARNING: [Vivado 12-4739] set_input_delay:No valid object(s) found for '-objects [get_ports usb_cen]'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:87]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'usb_rdn'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:88]
+CRITICAL WARNING: [Vivado 12-4739] set_input_delay:No valid object(s) found for '-objects [get_ports usb_rdn]'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:88]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'usb_wrn'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:89]
+CRITICAL WARNING: [Vivado 12-4739] set_input_delay:No valid object(s) found for '-objects [get_ports usb_wrn]'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:89]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'j16_sel'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:91]
+CRITICAL WARNING: [Vivado 12-4739] set_input_delay:No valid object(s) found for '-objects [get_ports j16_sel]'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:91]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'k16_sel'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:92]
+CRITICAL WARNING: [Vivado 12-4739] set_input_delay:No valid object(s) found for '-objects [get_ports k16_sel]'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:92]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'pushbutton'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:93]
+CRITICAL WARNING: [Vivado 12-4739] set_input_delay:No valid object(s) found for '-objects [get_ports pushbutton]'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:93]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'led1'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:95]
+CRITICAL WARNING: [Vivado 12-4739] set_output_delay:No valid object(s) found for '-objects [get_ports led1]'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:95]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'led2'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:96]
+CRITICAL WARNING: [Vivado 12-4739] set_output_delay:No valid object(s) found for '-objects [get_ports led2]'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:96]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'led3'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:97]
+CRITICAL WARNING: [Vivado 12-4739] set_output_delay:No valid object(s) found for '-objects [get_ports led3]'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:97]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'usb_data'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:98]
+CRITICAL WARNING: [Vivado 12-4739] set_output_delay:No valid object(s) found for '-objects [get_ports usb_data]'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:98]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'tio_trigger'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:99]
+CRITICAL WARNING: [Vivado 12-4739] set_output_delay:No valid object(s) found for '-objects [get_ports tio_trigger]'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:99]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'tio_clkout'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:100]
+CRITICAL WARNING: [Vivado 12-4739] set_output_delay:No valid object(s) found for '-objects [get_ports tio_clkout]'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:100]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'led1'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:101]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_ports led1]'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:101]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'led2'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:102]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_ports led2]'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:102]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'led3'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:103]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_ports led3]'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:103]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'usb_data'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:104]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_ports usb_data]'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:104]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'tio_trigger'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:105]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_ports tio_trigger]'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:105]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'tio_clkout'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:106]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_ports tio_clkout]'. [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc:106]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+Finished Parsing XDC File [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/chipwhisperer-ML/hardware/victims/cw305_artixtarget/fpga/ml/BNN/hardware/interface/cw305.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/cw305_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/cw305_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 2398.008 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.193 . Memory (MB): peak = 2398.008 ; gain = 0.000
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:54 ; elapsed = 00:00:54 . Memory (MB): peak = 2398.008 ; gain = 974.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tftg256-2
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:01:00 ; elapsed = 00:01:00 . Memory (MB): peak = 2416.824 ; gain = 993.707
+---------------------------------------------------------------------------------
+cw305_top__GC0blin_layer__GB0blin_layer__GB1bconv_layer__GB3blin_layer__GB3blin_layer__GB4blin_layer__GB5bconv_layer__GB1bconv_layer__GB4bconv_layer__GB0bconv_layer__GB2blin_layer__GB2bnn__GC0---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:01:02 ; elapsed = 00:01:02 . Memory (MB): peak = 2425.695 ; gain = 1002.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:04 ; elapsed = 00:01:04 . Memory (MB): peak = 2425.695 ; gain = 1002.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Mimic Skeleton from Reference
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Mimic Skeleton from Reference : Time (s): cpu = 00:01:06 ; elapsed = 00:01:06 . Memory (MB): peak = 2425.695 ; gain = 1002.578
+---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: yes
+
+   Stitch points used : changed
+
+
+2. Change Summary
+
+Report Incremental Modules: 
++-+----------------+------------+----------+----------+
+| |Changed Modules |Replication |Instances |Changed % |
++-+----------------+------------+----------+----------+
++-+----------------+------------+----------+----------+
+
+
+   Full Design Size (number of cells) : 256211
+   Resynthesis Design Size (number of cells) : 0
+   Resynth % : 0.0000,  Reuse % : 100.0000
+
+3. Reference Checkpoint Information
+
++-----------------------------------------------------------------------------------------------------------+
+| DCP Location:  | D:/chipwhisperer-ML/interface_02/interface_02.srcs/utils_1/imports/synth_1/cw305_top.dcp |
++-----------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------+------------------------------+
+|         DCP Information        |             Value            |
++--------------------------------+------------------------------+
+| Vivado Version                 |                    v2022.2 |
+| DCP State                      |                              |
++--------------------------------+------------------------------+
+
+
+
+Report RTL Partitions: 
++------+-------------------------+------------+----------+
+|      |RTL Partition            |Replication |Instances |
++------+-------------------------+------------+----------+
+|1     |bconv_layer__GB0_#REUSE# |           1|         0|
+|2     |bconv_layer__GB1_#REUSE# |           1|         0|
+|3     |bconv_layer__GB2_#REUSE# |           1|         0|
+|4     |bconv_layer__GB3_#REUSE# |           1|         0|
+|5     |bconv_layer__GB4_#REUSE# |           1|         0|
+|6     |blin_layer__GB0_#REUSE#  |           1|         0|
+|7     |blin_layer__GB1_#REUSE#  |           1|         0|
+|8     |blin_layer__GB2_#REUSE#  |           1|         0|
+|9     |blin_layer__GB3_#REUSE#  |           1|         0|
+|10    |blin_layer__GB4_#REUSE#  |           1|         0|
+|11    |blin_layer__GB5_#REUSE#  |           1|         0|
+|12    |bnn__GC0_#REUSE#         |           1|         0|
+|13    |cw305_top__GC0_#REUSE#   |           1|         0|
++------+-------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7077] IncrSyn: subsequent runs will still be incremental as the reference run was parallel and that data is reused
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:11 ; elapsed = 00:01:22 . Memory (MB): peak = 2425.695 ; gain = 1002.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Stitch Unchanged AreaOpt Partitions
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Stitch Unchanged AreaOpt Partitions : Time (s): cpu = 00:01:12 ; elapsed = 00:01:23 . Memory (MB): peak = 2425.695 ; gain = 1002.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:20 ; elapsed = 00:01:31 . Memory (MB): peak = 2454.184 ; gain = 1031.066
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:20 ; elapsed = 00:01:32 . Memory (MB): peak = 2454.191 ; gain = 1031.074
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7077] IncrSyn: subsequent runs will still be incremental as the reference run was parallel and that data is reused
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:20 ; elapsed = 00:01:32 . Memory (MB): peak = 2472.262 ; gain = 1049.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Stitch Unchanged Partitions
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Stitch Unchanged Partitions : Time (s): cpu = 00:01:21 ; elapsed = 00:01:32 . Memory (MB): peak = 2472.262 ; gain = 1049.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[6][6]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[6][5]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[6][4]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[6][3]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[6][2]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[6][1]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[6][0]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[5][6]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[5][5]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[5][4]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[5][3]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[5][2]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[5][1]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[5][0]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[4][6]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[4][5]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[4][4]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[4][3]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[4][2]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[4][1]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[4][0]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[3][6]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[3][5]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[3][4]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[3][3]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[3][2]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[3][1]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[3][0]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[2][6]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[2][5]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[2][4]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[2][3]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[2][2]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[2][1]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[2][0]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[1][6]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[1][5]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[1][4]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[1][3]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[1][2]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[1][1]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[1][0]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[0][6]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[0][5]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[0][4]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[0][3]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[0][2]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[0][1]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (decoder/image_o_reg[0][0]) is unused and will be removed from module cw305_top.
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:26 ; elapsed = 00:01:37 . Memory (MB): peak = 2479.840 ; gain = 1056.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:26 ; elapsed = 00:01:37 . Memory (MB): peak = 2479.840 ; gain = 1056.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:26 ; elapsed = 00:01:37 . Memory (MB): peak = 2479.840 ; gain = 1056.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:26 ; elapsed = 00:01:37 . Memory (MB): peak = 2479.840 ; gain = 1056.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:26 ; elapsed = 00:01:37 . Memory (MB): peak = 2479.840 ; gain = 1056.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:26 ; elapsed = 00:01:37 . Memory (MB): peak = 2479.840 ; gain = 1056.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |OBUF |    12|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:26 ; elapsed = 00:01:37 . Memory (MB): peak = 2479.840 ; gain = 1056.723
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 53 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:39 ; elapsed = 00:01:21 . Memory (MB): peak = 2479.840 ; gain = 933.277
+Synthesis Optimization Complete : Time (s): cpu = 00:01:26 ; elapsed = 00:01:38 . Memory (MB): peak = 2479.840 ; gain = 1056.723
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2491.852 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2495.516 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: b97c5b86
+INFO: [Common 17-83] Releasing license: Synthesis
+47 Infos, 230 Warnings, 60 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:31 ; elapsed = 00:01:44 . Memory (MB): peak = 2495.516 ; gain = 1467.895
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'D:/chipwhisperer-ML/interface_02/interface_02.runs/synth_1/cw305_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file cw305_top_utilization_synth.rpt -pb cw305_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 25 00:17:19 2023...
